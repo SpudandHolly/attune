@@ -560,46 +560,55 @@
     }
     .img-placeholder svg { opacity: 0.3; }
 
-    /* ── Why Attune ────────────────────────────── */
-    #why {
-      position: relative;
-    }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .why-visual .img-placeholder {
-      height: 560px;
-      border-radius: 8px;
-    }
-    .features-list { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
-    .feature-item {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      padding: 24px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      transition: border-color 0.3s;
-    }
-    .feature-item:hover { border-color: rgba(196,149,106,0.35); }
-    .feature-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--bg);
-    }
-    .feature-item h4 { color: var(--cream); font-family: var(--serif); font-size: 1.05rem; margin-bottom: 6px; }
-    .feature-item p { font-size: 0.88rem; }
+   <!-- ── Why Attune ─────────────────────────────── -->
+<section id="why" aria-labelledby="why-title">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-visual fade-in">
+        <img
+          src="whyattune.png"
+          alt="Professional illustration representing Attune's emotion-based matching and psychological compatibility"
+          class="why-attune-image"
+        />
+      </div>
+      <div class="why-content">
+        <div class="section-eyebrow fade-in">Why Attune</div>
+        <h2 id="why-title" class="section-title fade-in">Dating apps are broken.<br><em>We fixed them.</em></h2>
+        <p class="fade-in" style="margin-bottom:0">Other apps let you craft a perfect version of yourself. Attune shows who you actually are and finds who actually resonates with that person.</p>
+        <div class="features-list">
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🚫</div>
+            <div>
+              <h4>Zero fake profiles</h4>
+              <p>Every profile requires a live emotion-capture session. Bots, catfish, and scammers can't fake involuntary micro-expressions. It's scientifically verified authenticity.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🧠</div>
+            <div>
+              <h4>Deep compatibility, not surface attraction</h4>
+              <p>You might swipe right on someone beautiful and feel nothing on date three. Emotional compatibility predicts long-term connection far better than photos ever could.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🔒</div>
+            <div>
+              <h4>Your data stays yours</h4>
+              <p>We process everything on-device. We never sell emotional data. Ever. You can delete your entire profile and every trace of your data in one tap.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">💬</div>
+            <div>
+              <h4>Better first conversations</h4>
+              <p>When you match on emotional wavelength, the conversation flows naturally. No more awkward openers. You already know, on some level, this person gets you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     /* ── Social Proof ──────────────────────────── */
     #proof {
