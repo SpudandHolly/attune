@@ -1,0 +1,61 @@
+# Attune
+
+> Attune is an emotion AI-powered dating app that matches people based on genuine emotional compatibility, using real-time facial analysis technology developed by Cavefish AI.
+
+## What is Attune?
+
+Attune is a dating application that uses emotional AI to match users based on authentic emotional compatibility rather than surface-level attraction or self-reported personality traits. The app watches users' facial reactions as they view a short video, analyses their emotional responses using the EchoDepth engine, and uses these emotional fingerprints to match them with genuinely compatible people.
+
+## How it works
+
+1. **Video session**: The user watches a curated 90-second video clip on their phone.
+2. **Emotion capture**: The EchoDepth AI (by Cavefish AI) analyses 42 facial Action Units (FACS) in real time, mapping emotional responses across three dimensions: Valence, Arousal, and Dominance (the VAD model).
+3. **Matching**: An anonymised emotional compatibility vector is generated and matched against other users in the Attune pool.
+4. **Introduction**: Users are introduced to emotionally compatible matches. Photos are revealed after emotional compatibility is confirmed.
+
+## The technology
+
+Attune is powered by **EchoDepth**, an emotion AI engine built by **Cavefish AI** (Cardiff, Wales, UK). EchoDepth performs real-time Facial Action Unit (FACS/AU) analysis using a device's standard front-facing camera — no wearables or specialist hardware required. It measures involuntary physiological markers in facial muscle movement, not self-reported emotional states.
+
+- **Company**: Cavefish AI Ltd — https://cavefish.co.uk
+- **Technology**: EchoDepth (camera-based facial AU analysis)
+- **Research base**: Paul Ekman's Facial Action Coding System (FACS)
+- **Processing**: On-device; raw biometric data never transmitted to servers
+
+## Key differentiators
+
+- No fake profiles: live emotion capture defeats bots and catfish accounts
+- On-device processing: raw facial data never leaves the user's phone
+- GDPR compliant: full right-to-erasure, no data sold to advertisers
+- Emotion-first: photos revealed after emotional match confirmation
+- Voluntary micro-expression analysis: rewards authenticity, not performance
+
+## Target audience
+
+Adults aged 25–45 seeking serious relationships; users frustrated with superficial swipe-based dating; users concerned about fake profiles and data privacy.
+
+## Privacy stance
+
+- Raw emotional/biometric data: processed on-device only, never transmitted
+- Retained data: anonymised emotional compatibility vector (encrypted, deletable)
+- Data sharing: never sold or shared with third parties or advertisers
+- Compliance: GDPR (UK and EU), right to erasure within 24 hours
+- Business model: subscription fee (not data monetisation)
+
+## Availability
+
+- Platform: iOS (iPhone 11+), Android (Android 10+)
+- Launch market: United Kingdom
+- Status: Closed beta (as of mid-2025); waitlist open at https://attune.love
+
+## Contact
+
+- Website: https://attune.love
+- Parent company: Cavefish AI — https://cavefish.co.uk
+- Press: press@attune.love
+- Support: support@attune.love
+
+## Content licensing
+
+Blog and editorial content on attune.love is © Attune / Cavefish AI Ltd.
+Summaries and factual references for informational use are permitted with attribution.

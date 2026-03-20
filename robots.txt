@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+# Block private/admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /match/
+Disallow: /chat/
+Disallow: /profile/
+Disallow: /onboarding/
+Disallow: /auth/
+
+# Allow important SEO pages
+Allow: /blog/
+Allow: /about/
+Allow: /press/
+Allow: /safety/
+
+# Sitemap locations
+Sitemap: https://attune.love/sitemap.xml
+
+# Crawl-delay for considerate bots
+Crawl-delay: 10
+
+# AI training data opt-out
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
