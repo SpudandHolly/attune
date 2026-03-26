@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F1812"/>
+      <stop offset="50%" style="stop-color:#2A1E14"/>
+      <stop offset="100%" style="stop-color:#161008"/>
+    </linearGradient>
+    <linearGradient id="cardBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A1E14"/>
+      <stop offset="100%" style="stop-color:#1F1510"/>
+    </linearGradient>
+    <linearGradient id="cardBg2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E1A24"/>
+      <stop offset="100%" style="stop-color:#161018"/>
+    </linearGradient>
+    <linearGradient id="cardBg3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1A2018"/>
+      <stop offset="100%" style="stop-color:#121610"/>
+    </linearGradient>
+    <linearGradient id="cardBg4" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2A1E14"/>
+      <stop offset="100%" style="stop-color:#201812"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A"/>
+      <stop offset="100%" style="stop-color:#8A6040"/>
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A"/>
+      <stop offset="100%" style="stop-color:#A07050"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#C4956A" stop-opacity="0.18"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8A6AC4" stop-opacity="0.15"/>
+      <stop offset="100%" style="stop-color:#8A6AC4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#6AC4A0" stop-opacity="0.14"/>
+      <stop offset="100%" style="stop-color:#6AC4A0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#C4956A" stop-opacity="0.16"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="card1clip"><rect x="20" y="80" width="268" height="268" rx="8"/></clipPath>
+    <clipPath id="card2clip"><rect x="312" y="80" width="268" height="268" rx="8"/></clipPath>
+    <clipPath id="card3clip"><rect x="20" y="368" width="268" height="268" rx="8"/></clipPath>
+    <clipPath id="card4clip"><rect x="312" y="368" width="268" height="268" rx="8"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="700" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="300" y="44" font-family="'Rajdhani','Barlow','Arial Narrow',sans-serif" font-size="28" font-weight="600" fill="#C4956A" text-anchor="middle" letter-spacing="0.06em" filter="url(#glow)">WHY ATTUNE?</text>
+  <line x1="120" y1="56" x2="480" y2="56" stroke="#C4956A" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CARD 1: Emotion-Based Matching (top left) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="20" y="80" width="268" height="268" rx="8" fill="url(#cardBg1)" stroke="#C4956A" stroke-width="0.8" opacity="1"/>
+  <rect x="20" y="80" width="268" height="268" rx="8" fill="none" stroke="#C4956A" stroke-width="0.8" opacity="0.25"/>
+  <!-- glow -->
+  <ellipse cx="154" cy="190" rx="100" ry="90" fill="url(#glow1)"/>
+
+  <!-- Two facing silhouettes with heart waveform between them -->
+  <!-- Left person silhouette -->
+  <ellipse cx="100" cy="155" rx="18" ry="20" fill="#C4956A" opacity="0.25"/>
+  <path d="M68 230 Q68 195 100 195 Q132 195 132 230" fill="#C4956A" opacity="0.18"/>
+  <!-- Right person silhouette -->
+  <ellipse cx="208" cy="155" rx="18" ry="20" fill="#C4956A" opacity="0.25"/>
+  <path d="M176 230 Q176 195 208 195 Q240 195 240 230" fill="#C4956A" opacity="0.18"/>
+
+  <!-- Heartbeat / ECG line between them -->
+  <polyline points="115,178 125,178 130,162 137,195 144,155 151,195 157,168 162,178 175,178 185,178"
+    stroke="#C4956A" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" opacity="0.9"/>
+
+  <!-- Central heart -->
+  <path d="M154,190 C154,190 138,178 138,169 C138,163 143,158 154,168 C165,158 170,163 170,169 C170,178 154,190 154,190Z"
+    fill="url(#heartGrad)" opacity="0.85" filter="url(#glow)"/>
+
+  <!-- Emotion dots above each silhouette -->
+  <g opacity="0.6">
+    <circle cx="93" cy="135" r="3" fill="#C4956A"/>
+    <circle cx="103" cy="130" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="113" cy="133" r="2.5" fill="#C4956A"/>
+    <circle cx="195" cy="130" r="3" fill="#C4956A"/>
+    <circle cx="207" cy="135" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="218" cy="132" r="2.5" fill="#C4956A"/>
+  </g>
+
+  <!-- Label -->
+  <rect x="20" y="314" width="268" height="34" rx="0" fill="#C4956A" opacity="0.07"/>
+  <rect x="20" y="314" width="268" height="1" fill="#C4956A" opacity="0.2"/>
+  <text x="154" y="337" font-family="'DM Mono','Courier New',monospace" font-size="11" fill="#C4956A" text-anchor="middle" letter-spacing="0.14em" opacity="0.9">EMOTION-BASED MATCHING</text>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- CARD 2: Deep Compatibility (top right) -->
+  <!-- ════════════════════════════════════════ -->
+  <rect x="312" y="80" width="268" height="268" rx="8" fill="url(#cardBg2)" stroke="#8A6AC4" stroke-width="0.8" opacity="0.25"/>
+  <!-- glow -->
+  <ellipse cx="446" cy="190" rx="100" ry="90" fill="url(#glow2)"/>
+
+  <!-- Brain + Heart side by side connected -->
+  <!-- Brain left hemisphere -->
+  <path d="M390,155 C385,148 380,140 382,132 C384,122 393,118 402,122 C407,115 416,113 422,118 C428,112 438,112 442,120 C450,116 458,122 457,132 C462,138 462,148 457,155 C454,162 450,167 446,168 C442,169 438,167 434,165 C430,167 425,169 420,168 C415,169 410,167 406,165 C401,163 395,160 390,155Z"
+    fill="#8A6AC4" opacity="0.2" stroke="#8A6AC4" stroke-width="1.2" filter="url(#glow)"/>
+  <!-- Brain fissures -->
+  <path d="M416,120 C416,135 412,148 416,162" stroke="#8A6AC4" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M395,135 C402,140 408,145 404,155" stroke="#8A6AC4" stroke-width="0.7" fill="none" opacity="0.4"/>
+  <path d="M435,130 C430,138 434,147 430,155" stroke="#8A6AC4" stroke-width="0.7" fill="none" opacity="0.4"/>
+
+  <!-- Connection arrow/line -->
+  <line x1="460" y1="155" x2="478" y2="155" stroke="#C4956A" stroke-width="1.2" opacity="0.5"/>
+  <path d="M475,151 L481,155 L475,159" fill="none" stroke="#C4956A" stroke-width="1.2" stroke-linejoin="round" opacity="0.5"/>
+
+  <!-- Heart right side -->
+  <path d="M498,172 C498,172 480,158 480,147 C480,139 486,133 498,144 C510,133 516,139 516,147 C516,158 498,172 498,172Z"
+    fill="url(#heartGrad)" opacity="0.75" filter="url(#glow)"/>
+
+  <!-- Compatibility percentage ring -->
+  <circle cx="446" cy="210" r="28" fill="none" stroke="#8A6AC4" stroke-width="1" opacity="0.2"/>
+  <circle cx="446" cy="210" r="28" fill="none" stroke="#C4956A" stroke-width="2"
+    stroke-dasharray="132 176" stroke-dashoffset="44"
+    stroke-linecap="round" opacity="0.8" filter="url(#glow)" transform="rotate(-90 446 210)"/>
+  <text x="446" y="214" font-family="'DM Mono','Courier New',monospace" font-size="13" font-weight="bold" fill="#C4956A" text-anchor="middle" opacity="0.9">94%</text>
+  <text x="446" y="225" font-family="'DM Mono','Courier New',monospace" font-size="7" fill="#C4956A" text-anchor="middle" opacity="0.5" letter-spacing="0.1em">MATCH</text>
+
+  <!-- Label -->
+  <rect x="312" y="314" width="268" height="34" rx="0" fill="#8A6AC4" opacity="0.07"/>
+  <rect x="312" y="314" width="268" height="1" fill="#8A6AC4" opacity="0.2"/>
+  <text x="446" y="337" font-family="'DM Mono','Courier New',monospace" font-size="11" fill="#C4956A" text-anchor="middle" letter-spacing="0.14em" opacity="0.9">DEEP COMPATIBILITY</text>
+
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- CARD 3: Psychology-Driven (bottom left)    -->
+  <!-- ════════════════════════════════════════════ -->
+  <rect x="20" y="368" width="268" height="268" rx="8" fill="url(#cardBg3)" stroke="#6AC4A0" stroke-width="0.8" opacity="0.25"/>
+  <!-- glow -->
+  <ellipse cx="154" cy="480" rx="100" ry="90" fill="url(#glow3)"/>
+
+  <!-- Two facing head silhouettes with cosmos inside -->
+  <!-- Left head -->
+  <path d="M88,455 C88,430 103,415 120,415 C125,415 130,416 134,418 L134,455 C134,465 128,472 120,475 C112,478 104,475 96,468 C91,463 88,459 88,455Z"
+    fill="#6AC4A0" opacity="0.12" stroke="#6AC4A0" stroke-width="1" opacity="0.4"/>
+  <!-- Right head (facing left, mirrored) -->
+  <path d="M220,455 C220,430 205,415 188,415 C183,415 178,416 174,418 L174,455 C174,465 180,472 188,475 C196,478 204,475 212,468 C217,463 220,459 220,455Z"
+    fill="#6AC4A0" opacity="0.12" stroke="#6AC4A0" stroke-width="1" opacity="0.4"/>
+
+  <!-- Stars/cosmos dots inside heads -->
+  <g opacity="0.6" fill="#C4956A">
+    <circle cx="108" cy="430" r="1.5"/>
+    <circle cx="116" cy="438" r="1"/>
+    <circle cx="122" cy="425" r="2"/>
+    <circle cx="128" cy="442" r="1.5"/>
+    <circle cx="112" cy="450" r="1"/>
+    <circle cx="125" cy="432" r="1"/>
+  </g>
+  <g opacity="0.6" fill="#C4956A">
+    <circle cx="198" cy="430" r="1.5"/>
+    <circle cx="190" cy="438" r="1"/>
+    <circle cx="186" cy="425" r="2"/>
+    <circle cx="182" cy="442" r="1.5"/>
+    <circle cx="195" cy="450" r="1"/>
+    <circle cx="183" cy="432" r="1"/>
+  </g>
+
+  <!-- Central glowing heart between the heads -->
+  <path d="M154,468 C154,468 136,454 136,443 C136,435 142,429 154,440 C166,429 172,435 172,443 C172,454 154,468 154,468Z"
+    fill="url(#heartGrad)" opacity="0.8" filter="url(#softglow)"/>
+
+  <!-- Orbiting dots around the heart -->
+  <circle cx="154" cy="420" r="2.5" fill="#C4956A" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="178" cy="434" r="2" fill="#6AC4A0" opacity="0.5"/>
+  <circle cx="130" cy="434" r="2" fill="#6AC4A0" opacity="0.5"/>
+
+  <!-- VAD bars at bottom of card -->
+  <g font-family="'DM Mono','Courier New',monospace" font-size="7.5" fill="#6AC4A0" opacity="0.6" letter-spacing="0.08em">
+    <text x="40" y="503">V</text>
+    <rect x="52" y="496" width="90" height="6" rx="2" fill="#6AC4A0" opacity="0.08"/>
+    <rect x="52" y="496" width="72" height="6" rx="2" fill="#6AC4A0" opacity="0.5"/>
+    <text x="40" y="517">A</text>
+    <rect x="52" y="510" width="90" height="6" rx="2" fill="#6AC4A0" opacity="0.08"/>
+    <rect x="52" y="510" width="54" height="6" rx="2" fill="#6AC4A0" opacity="0.4"/>
+    <text x="40" y="531">D</text>
+    <rect x="52" y="524" width="90" height="6" rx="2" fill="#6AC4A0" opacity="0.08"/>
+    <rect x="52" y="524" width="80" height="6" rx="2" fill="#C4956A" opacity="0.5"/>
+  </g>
+  <text x="154" y="550" font-family="'DM Mono','Courier New',monospace" font-size="8" fill="#6AC4A0" text-anchor="middle" opacity="0.4" letter-spacing="0.1em">42 FACIAL ACTION UNITS</text>
+
+  <!-- Label -->
+  <rect x="20" y="602" width="268" height="34" rx="0" fill="#6AC4A0" opacity="0.07"/>
+  <rect x="20" y="602" width="268" height="1" fill="#6AC4A0" opacity="0.2"/>
+  <text x="154" y="625" font-family="'DM Mono','Courier New',monospace" font-size="11" fill="#C4956A" text-anchor="middle" letter-spacing="0.14em" opacity="0.9">PSYCHOLOGY-DRIVEN</text>
+
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- CARD 4: Meaningful Connections (bottom right) -->
+  <!-- ══════════════════════════════════════════════ -->
+  <rect x="312" y="368" width="268" height="268" rx="8" fill="url(#cardBg4)" stroke="#C4956A" stroke-width="0.8" opacity="0.25"/>
+  <!-- glow -->
+  <ellipse cx="446" cy="480" rx="100" ry="90" fill="url(#glow4)"/>
+
+  <!-- Table scene: two people, candle glow -->
+  <!-- Candle / table light glow -->
+  <ellipse cx="446" cy="488" rx="50" ry="35" fill="#C4956A" opacity="0.06"/>
+  <ellipse cx="446" cy="488" rx="25" ry="18" fill="#C4956A" opacity="0.08"/>
+
+  <!-- Table ellipse -->
+  <ellipse cx="446" cy="510" rx="60" ry="12" fill="none" stroke="#C4956A" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Candle -->
+  <rect x="441" y="478" width="10" height="28" rx="2" fill="#C4956A" opacity="0.3" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+  <!-- Flame -->
+  <path d="M446,472 C443,466 440,460 446,454 C452,460 449,466 446,472Z" fill="#C4956A" opacity="0.8" filter="url(#softglow)"/>
+  <path d="M446,470 C444,466 443,462 446,458 C449,462 448,466 446,470Z" fill="#F0C080" opacity="0.7"/>
+
+  <!-- Left person silhouette (leaning in) -->
+  <!-- Head -->
+  <ellipse cx="395" cy="455" rx="15" ry="17" fill="#C4956A" opacity="0.22"/>
+  <!-- Body leaning right slightly -->
+  <path d="M376,510 Q376,480 395,480 Q414,480 418,510" fill="#C4956A" opacity="0.15"/>
+  <!-- Chin rest arm hint -->
+  <path d="M406,470 Q412,478 418,482" stroke="#C4956A" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Right person silhouette -->
+  <ellipse cx="497" cy="455" rx="15" ry="17" fill="#C4956A" opacity="0.22"/>
+  <path d="M478,510 Q478,480 497,480 Q516,480 516,510" fill="#C4956A" opacity="0.15"/>
+  <path d="M486,470 Q480,478 474,482" stroke="#C4956A" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Glasses on table -->
+  <ellipse cx="420" cy="512" rx="8" ry="4" fill="none" stroke="#C4956A" stroke-width="0.8" opacity="0.4"/>
+  <ellipse cx="472" cy="512" rx="8" ry="4" fill="none" stroke="#C4956A" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Connection sparks between them -->
+  <g fill="#C4956A" opacity="0.5">
+    <circle cx="430" cy="460" r="1.5"/>
+    <circle cx="440" cy="453" r="1"/>
+    <circle cx="452" cy="453" r="1"/>
+    <circle cx="462" cy="460" r="1.5"/>
+    <circle cx="446" cy="447" r="2" filter="url(#glow)"/>
+  </g>
+
+  <!-- Small heart above candle -->
+  <path d="M446,440 C446,440 440,435 440,431 C440,427 443,425 446,428 C449,425 452,427 452,431 C452,435 446,440 446,440Z"
+    fill="#C4956A" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- Stars scattered -->
+  <g fill="#C4956A" opacity="0.25">
+    <circle cx="325" cy="390" r="1"/>
+    <circle cx="340" cy="405" r="1.5"/>
+    <circle cx="560" cy="385" r="1"/>
+    <circle cx="548" cy="400" r="1.5"/>
+    <circle cx="320" cy="550" r="1"/>
+    <circle cx="572" cy="545" r="1"/>
+  </g>
+
+  <!-- Label -->
+  <rect x="312" y="602" width="268" height="34" rx="0" fill="#C4956A" opacity="0.07"/>
+  <rect x="312" y="602" width="268" height="1" fill="#C4956A" opacity="0.2"/>
+  <text x="446" y="625" font-family="'DM Mono','Courier New',monospace" font-size="11" fill="#C4956A" text-anchor="middle" letter-spacing="0.14em" opacity="0.9">MEANINGFUL CONNECTIONS</text>
+
+  <!-- Outer border -->
+  <rect x="1" y="1" width="598" height="698" rx="10" fill="none" stroke="#C4956A" stroke-width="0.8" opacity="0.15"/>
+</svg>
