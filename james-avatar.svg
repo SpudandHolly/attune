@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" width="42" height="42">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="21" cy="21" r="21"/>
+    </clipPath>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A1E14"/>
+      <stop offset="100%" style="stop-color:#1A1208"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4956A"/>
+      <stop offset="100%" style="stop-color:#B8784A"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A3020"/>
+      <stop offset="100%" style="stop-color:#2A1A0E"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3A4A60"/>
+      <stop offset="100%" style="stop-color:#2A3A50"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="42" height="42" fill="url(#bg)" clip-path="url(#circle)"/>
+  <!-- shirt / body -->
+  <ellipse cx="21" cy="54" rx="18" ry="16" fill="url(#shirt)" clip-path="url(#circle)"/>
+  <!-- neck -->
+  <rect x="17" y="29" width="8" height="8" rx="2" fill="url(#skin)"/>
+  <!-- head -->
+  <ellipse cx="21" cy="22" rx="10" ry="11.5" fill="url(#skin)"/>
+  <!-- hair -->
+  <ellipse cx="21" cy="11.5" rx="10" ry="6" fill="url(#hair)"/>
+  <rect x="11" y="11" width="4" height="7" rx="2" fill="url(#hair)"/>
+  <rect x="27" y="11" width="4" height="7" rx="2" fill="url(#hair)"/>
+  <!-- eyebrows -->
+  <path d="M15 18.5 Q17 17.5 19 18.5" stroke="#3A2010" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M23 18.5 Q25 17.5 27 18.5" stroke="#3A2010" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- eyes -->
+  <ellipse cx="17" cy="20.5" rx="2.2" ry="1.6" fill="#2A1A0A"/>
+  <ellipse cx="25" cy="20.5" rx="2.2" ry="1.6" fill="#2A1A0A"/>
+  <circle cx="17.6" cy="20" r="0.5" fill="white" opacity="0.8"/>
+  <circle cx="25.6" cy="20" r="0.5" fill="white" opacity="0.8"/>
+  <!-- nose -->
+  <path d="M20 22 L19 24.5 Q21 25.5 23 24.5 L22 22" stroke="#A06840" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <!-- smile -->
+  <path d="M17.5 27 Q21 29 24.5 27" stroke="#A06840" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- subtle stubble/jaw shadow -->
+  <ellipse cx="21" cy="29" rx="9" ry="3" fill="#B07848" opacity="0.15"/>
+</svg>

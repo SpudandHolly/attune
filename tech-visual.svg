@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F1812"/>
+      <stop offset="50%" style="stop-color:#2A1E14"/>
+      <stop offset="100%" style="stop-color:#161008"/>
+    </linearGradient>
+    <radialGradient id="faceGlow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" style="stop-color:#C4956A" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A"/>
+      <stop offset="100%" style="stop-color:#8A6040"/>
+    </linearGradient>
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C4956A"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6A9AC4"/>
+      <stop offset="100%" style="stop-color:#6A9AC4" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="barGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9AC46A"/>
+      <stop offset="100%" style="stop-color:#9AC46A" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="url(#bg)"/>
+
+  <!-- Face centre glow -->
+  <ellipse cx="300" cy="200" rx="200" ry="180" fill="url(#faceGlow)"/>
+
+  <!-- === FACE OUTLINE === -->
+  <!-- Head shape -->
+  <ellipse cx="300" cy="210" rx="105" ry="125" fill="none" stroke="#C4956A" stroke-width="1" opacity="0.25"/>
+  
+  <!-- Face silhouette filled faintly -->
+  <ellipse cx="300" cy="210" rx="105" ry="125" fill="#C4956A" opacity="0.03"/>
+
+  <!-- Brow ridge -->
+  <path d="M230 165 Q260 155 300 157 Q340 155 370 165" stroke="#C4956A" stroke-width="0.8" fill="none" opacity="0.3"/>
+  
+  <!-- Eye sockets -->
+  <ellipse cx="265" cy="185" rx="22" ry="14" fill="none" stroke="#C4956A" stroke-width="0.7" opacity="0.3"/>
+  <ellipse cx="335" cy="185" rx="22" ry="14" fill="none" stroke="#C4956A" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- Nose bridge -->
+  <path d="M295 195 L290 230 Q300 237 310 230 L305 195" stroke="#C4956A" stroke-width="0.7" fill="none" opacity="0.25"/>
+
+  <!-- Mouth -->
+  <path d="M272 255 Q300 265 328 255" stroke="#C4956A" stroke-width="0.8" fill="none" opacity="0.3"/>
+  <path d="M278 248 Q300 252 322 248" stroke="#C4956A" stroke-width="0.6" fill="none" opacity="0.2"/>
+
+  <!-- Chin -->
+  <path d="M230 280 Q300 340 370 280" stroke="#C4956A" stroke-width="0.6" fill="none" opacity="0.2"/>
+
+  <!-- === ACTION UNIT NODES === -->
+  <!-- These represent the 42 facial action unit points -->
+  <!-- Forehead AUs -->
+  <g filter="url(#glow)">
+    <!-- Forehead / scalp -->
+    <circle cx="300" cy="100" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="270" cy="108" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="330" cy="108" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="250" cy="120" r="2" fill="#C4956A" opacity="0.5"/>
+    <circle cx="350" cy="120" r="2" fill="#C4956A" opacity="0.5"/>
+
+    <!-- Brow AUs (AU1, AU2, AU4) -->
+    <circle cx="248" cy="158" r="3" fill="#C4956A" opacity="0.9"/>
+    <circle cx="268" cy="153" r="3" fill="#C4956A" opacity="0.9"/>
+    <circle cx="288" cy="155" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="312" cy="155" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="332" cy="153" r="3" fill="#C4956A" opacity="0.9"/>
+    <circle cx="352" cy="158" r="3" fill="#C4956A" opacity="0.9"/>
+
+    <!-- Eye AUs (AU5, AU6, AU7, AU41-46) -->
+    <circle cx="245" cy="178" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="254" cy="175" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="265" cy="173" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="276" cy="175" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="285" cy="178" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="265" cy="197" r="2" fill="#C4956A" opacity="0.6"/>
+
+    <circle cx="315" cy="178" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="324" cy="175" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="335" cy="173" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="346" cy="175" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="355" cy="178" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="335" cy="197" r="2" fill="#C4956A" opacity="0.6"/>
+
+    <!-- Nose AUs (AU9, AU38, AU39) -->
+    <circle cx="300" cy="200" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="285" cy="225" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="315" cy="225" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="291" cy="233" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="309" cy="233" r="2.5" fill="#C4956A" opacity="0.8"/>
+
+    <!-- Cheek AUs (AU6, AU28) -->
+    <circle cx="232" cy="210" r="2.5" fill="#C4956A" opacity="0.7"/>
+    <circle cx="240" cy="228" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="368" cy="210" r="2.5" fill="#C4956A" opacity="0.7"/>
+    <circle cx="360" cy="228" r="2" fill="#C4956A" opacity="0.6"/>
+
+    <!-- Mouth / lip AUs (AU10-17, AU20, AU22-28) -->
+    <circle cx="270" cy="243" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="283" cy="240" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="300" cy="239" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="317" cy="240" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="330" cy="243" r="2.5" fill="#C4956A" opacity="0.8"/>
+    <circle cx="270" cy="258" r="2" fill="#C4956A" opacity="0.7"/>
+    <circle cx="283" cy="261" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="300" cy="262" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="317" cy="261" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="330" cy="258" r="2" fill="#C4956A" opacity="0.7"/>
+
+    <!-- Chin / jaw AUs -->
+    <circle cx="290" cy="285" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="300" cy="290" r="2.5" fill="#C4956A" opacity="0.7"/>
+    <circle cx="310" cy="285" r="2" fill="#C4956A" opacity="0.6"/>
+    <circle cx="260" cy="300" r="2" fill="#C4956A" opacity="0.5"/>
+    <circle cx="340" cy="300" r="2" fill="#C4956A" opacity="0.5"/>
+  </g>
+
+  <!-- === CONNECTING MESH LINES === -->
+  <g stroke="#C4956A" stroke-width="0.4" opacity="0.2">
+    <!-- Brow connections -->
+    <line x1="248" y1="158" x2="268" y2="153"/>
+    <line x1="268" y1="153" x2="288" y2="155"/>
+    <line x1="312" y1="155" x2="332" y2="153"/>
+    <line x1="332" y1="153" x2="352" y2="158"/>
+    <!-- Eye connections -->
+    <line x1="245" y1="178" x2="265" y2="173"/>
+    <line x1="265" y1="173" x2="285" y2="178"/>
+    <line x1="315" y1="178" x2="335" y2="173"/>
+    <line x1="335" y1="173" x2="355" y2="178"/>
+    <!-- brow to eye -->
+    <line x1="248" y1="158" x2="245" y2="178"/>
+    <line x1="285" y1="155" x2="285" y2="178"/>
+    <line x1="315" y1="155" x2="315" y2="178"/>
+    <line x1="352" y1="158" x2="355" y2="178"/>
+    <!-- Mouth connections -->
+    <line x1="270" y1="243" x2="283" y2="240"/>
+    <line x1="283" y1="240" x2="300" y2="239"/>
+    <line x1="300" y1="239" x2="317" y2="240"/>
+    <line x1="317" y1="240" x2="330" y2="243"/>
+    <line x1="270" y1="258" x2="283" y2="261"/>
+    <line x1="283" y1="261" x2="300" y2="262"/>
+    <line x1="300" y1="262" x2="317" y2="261"/>
+    <line x1="317" y1="261" x2="330" y2="258"/>
+    <line x1="270" y1="243" x2="270" y2="258"/>
+    <line x1="330" y1="243" x2="330" y2="258"/>
+    <!-- Chin connections -->
+    <line x1="270" y1="258" x2="260" y2="300"/>
+    <line x1="330" y1="258" x2="340" y2="300"/>
+    <line x1="290" y1="285" x2="260" y2="300"/>
+    <line x1="310" y1="285" x2="340" y2="300"/>
+    <!-- Nose -->
+    <line x1="291" y1="233" x2="285" y2="225"/>
+    <line x1="309" y1="233" x2="315" y2="225"/>
+  </g>
+
+  <!-- === TARGET / SCAN CORNER BRACKETS === -->
+  <g stroke="#C4956A" stroke-width="1.5" fill="none" opacity="0.6">
+    <!-- Top left -->
+    <path d="M178 78 L178 98 M178 78 L198 78"/>
+    <!-- Top right -->
+    <path d="M422 78 L422 98 M422 78 L402 78"/>
+    <!-- Bottom left -->
+    <path d="M178 342 L178 322 M178 342 L198 342"/>
+    <!-- Bottom right -->
+    <path d="M422 342 L422 322 M422 342 L402 342"/>
+  </g>
+
+  <!-- Scan line animation suggestion -->
+  <rect x="178" y="170" width="244" height="1" fill="#C4956A" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- AU label callouts -->
+  <g font-family="'DM Mono', 'Courier New', monospace" font-size="8" fill="#C4956A" opacity="0.55" letter-spacing="0.08em">
+    <text x="200" y="152">AU1·2</text>
+    <line x1="228" y1="152" x2="248" y2="158" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="200" y="176">AU5·7</text>
+    <line x1="228" y1="174" x2="245" y2="178" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="200" y="230">AU38·9</text>
+    <line x1="234" y1="228" x2="285" y2="225" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="200" y="253">AU12·6</text>
+    <line x1="235" y1="251" x2="270" y2="250" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="356" y="152">AU4</text>
+    <line x1="370" y1="150" x2="352" y2="158" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="366" y="176">AU46</text>
+    <line x1="386" y1="174" x2="368" y2="180" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="356" y="232">AU39</text>
+    <line x1="378" y1="230" x2="368" y2="225" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+    <text x="355" y="255">AU15</text>
+    <line x1="376" y1="253" x2="365" y2="250" stroke="#C4956A" stroke-width="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- === RIGHT PANEL: emotion readout === -->
+  <!-- Panel background -->
+  <rect x="470" y="60" width="290" height="320" rx="6" fill="#C4956A" opacity="0.03" stroke="#C4956A" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Panel header -->
+  <text x="490" y="90" font-family="'DM Mono', 'Courier New', monospace" font-size="9" fill="#C4956A" opacity="0.5" letter-spacing="0.2em">EMOTIONAL STATE · LIVE</text>
+  <line x1="490" y1="98" x2="740" y2="98" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Valence bar -->
+  <text x="490" y="122" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#C4956A" opacity="0.6" letter-spacing="0.1em">VALENCE</text>
+  <text x="730" y="122" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#C4956A" opacity="0.7" letter-spacing="0.05em" text-anchor="end">+0.72</text>
+  <rect x="490" y="128" width="240" height="8" rx="2" fill="#C4956A" opacity="0.07"/>
+  <rect x="490" y="128" width="173" height="8" rx="2" fill="url(#barGrad1)"/>
+
+  <!-- Arousal bar -->
+  <text x="490" y="158" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#C4956A" opacity="0.6" letter-spacing="0.1em">AROUSAL</text>
+  <text x="730" y="158" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#6A9AC4" opacity="0.7" letter-spacing="0.05em" text-anchor="end">+0.58</text>
+  <rect x="490" y="164" width="240" height="8" rx="2" fill="#6A9AC4" opacity="0.07"/>
+  <rect x="490" y="164" width="139" height="8" rx="2" fill="url(#barGrad2)"/>
+
+  <!-- Dominance bar -->
+  <text x="490" y="194" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#C4956A" opacity="0.6" letter-spacing="0.1em">OPENNESS</text>
+  <text x="730" y="194" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#9AC46A" opacity="0.7" letter-spacing="0.05em" text-anchor="end">+0.81</text>
+  <rect x="490" y="200" width="240" height="8" rx="2" fill="#9AC46A" opacity="0.07"/>
+  <rect x="490" y="200" width="194" height="8" rx="2" fill="url(#barGrad3)"/>
+
+  <!-- Divider -->
+  <line x1="490" y1="225" x2="740" y2="225" stroke="#C4956A" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Detected AUs -->
+  <text x="490" y="243" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#C4956A" opacity="0.5" letter-spacing="0.12em">ACTIVE ACTION UNITS</text>
+  
+  <!-- AU chips row 1 -->
+  <g font-family="'DM Mono', 'Courier New', monospace" font-size="8" letter-spacing="0.06em">
+    <rect x="490" y="252" width="32" height="16" rx="2" fill="#C4956A" opacity="0.12" stroke="#C4956A" stroke-width="0.5" opacity="0.3"/>
+    <text x="506" y="264" fill="#C4956A" opacity="0.8" text-anchor="middle">AU1</text>
+    
+    <rect x="528" y="252" width="32" height="16" rx="2" fill="#C4956A" opacity="0.12" stroke="#C4956A" stroke-width="0.5" opacity="0.3"/>
+    <text x="544" y="264" fill="#C4956A" opacity="0.8" text-anchor="middle">AU6</text>
+    
+    <rect x="566" y="252" width="32" height="16" rx="2" fill="#C4956A" opacity="0.12" stroke="#C4956A" stroke-width="0.5" opacity="0.3"/>
+    <text x="582" y="264" fill="#C4956A" opacity="0.8" text-anchor="middle">AU12</text>
+    
+    <rect x="604" y="252" width="32" height="16" rx="2" fill="#C4956A" opacity="0.12" stroke="#C4956A" stroke-width="0.5" opacity="0.3"/>
+    <text x="620" y="264" fill="#C4956A" opacity="0.8" text-anchor="middle">AU25</text>
+    
+    <rect x="642" y="252" width="32" height="16" rx="2" fill="#C4956A" opacity="0.12" stroke="#C4956A" stroke-width="0.5" opacity="0.3"/>
+    <text x="658" y="264" fill="#C4956A" opacity="0.8" text-anchor="middle">AU7</text>
+    
+    <!-- Row 2 -->
+    <rect x="490" y="274" width="32" height="16" rx="2" fill="#C4956A" opacity="0.07" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+    <text x="506" y="286" fill="#C4956A" opacity="0.5" text-anchor="middle">AU2</text>
+    
+    <rect x="528" y="274" width="32" height="16" rx="2" fill="#C4956A" opacity="0.07" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+    <text x="544" y="286" fill="#C4956A" opacity="0.5" text-anchor="middle">AU4</text>
+    
+    <rect x="566" y="274" width="32" height="16" rx="2" fill="#C4956A" opacity="0.12" stroke="#C4956A" stroke-width="0.5" opacity="0.3"/>
+    <text x="582" y="286" fill="#C4956A" opacity="0.8" text-anchor="middle">AU17</text>
+    
+    <rect x="604" y="274" width="32" height="16" rx="2" fill="#C4956A" opacity="0.07" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+    <text x="620" y="286" fill="#C4956A" opacity="0.5" text-anchor="middle">AU9</text>
+    
+    <rect x="642" y="274" width="46" height="16" rx="2" fill="#C4956A" opacity="0.07" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+    <text x="665" y="286" fill="#C4956A" opacity="0.5" text-anchor="middle">+37 more</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="490" y1="302" x2="740" y2="302" stroke="#C4956A" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Emotional fingerprint label -->
+  <text x="490" y="320" font-family="'DM Mono', 'Courier New', monospace" font-size="8.5" fill="#C4956A" opacity="0.5" letter-spacing="0.12em">EMOTIONAL FINGERPRINT</text>
+
+  <!-- Mini radar chart representing emotional fingerprint -->
+  <g transform="translate(600,352)">
+    <!-- Radar axes -->
+    <g stroke="#C4956A" stroke-width="0.5" opacity="0.2">
+      <line x1="0" y1="0" x2="0" y2="-36"/>
+      <line x1="0" y1="0" x2="31" y2="-18"/>
+      <line x1="0" y1="0" x2="31" y2="18"/>
+      <line x1="0" y1="0" x2="0" y2="36"/>
+      <line x1="0" y1="0" x2="-31" y2="18"/>
+      <line x1="0" y1="0" x2="-31" y2="-18"/>
+    </g>
+    <!-- Outer ring -->
+    <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18" fill="none" stroke="#C4956A" stroke-width="0.5" opacity="0.15"/>
+    <polygon points="0,-24 21,-12 21,12 0,24 -21,12 -21,-12" fill="none" stroke="#C4956A" stroke-width="0.5" opacity="0.1"/>
+    <!-- Data polygon -->
+    <polygon points="0,-30 27,-11 24,16 0,29 -23,14 -18,-20" 
+             fill="#C4956A" fill-opacity="0.12" 
+             stroke="#C4956A" stroke-width="1.2" stroke-opacity="0.7"
+             filter="url(#glow)"/>
+    <!-- Axis labels -->
+    <text x="0" y="-42" font-family="'DM Mono', 'Courier New', monospace" font-size="7" fill="#C4956A" opacity="0.5" text-anchor="middle">JOY</text>
+    <text x="38" y="-20" font-family="'DM Mono', 'Courier New', monospace" font-size="7" fill="#C4956A" opacity="0.5">TRUST</text>
+    <text x="38" y="24" font-family="'DM Mono', 'Courier New', monospace" font-size="7" fill="#C4956A" opacity="0.5">OPEN</text>
+    <text x="0" y="46" font-family="'DM Mono', 'Courier New', monospace" font-size="7" fill="#C4956A" opacity="0.5" text-anchor="middle">CALM</text>
+    <text x="-56" y="24" font-family="'DM Mono', 'Courier New', monospace" font-size="7" fill="#C4956A" opacity="0.5">SURP</text>
+    <text x="-52" y="-20" font-family="'DM Mono', 'Courier New', monospace" font-size="7" fill="#C4956A" opacity="0.5">CURIO</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="400" y="430" font-family="'DM Mono', 'Courier New', monospace" font-size="9.5" fill="#C4956A" opacity="0.3" text-anchor="middle" letter-spacing="0.2em">ECHODEPTH · 42 FACIAL ACTION UNITS · &lt;200ms RESPONSE</text>
+</svg>

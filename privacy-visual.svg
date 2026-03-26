@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F1812"/>
+      <stop offset="50%" style="stop-color:#2A1E14"/>
+      <stop offset="100%" style="stop-color:#1A1208"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A" stop-opacity="0.15"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="shieldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A"/>
+      <stop offset="100%" style="stop-color:#8A6040"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A" stop-opacity="0.2"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#C4956A" stop-opacity="0.12"/>
+      <stop offset="100%" style="stop-color:#C4956A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle centre radial glow -->
+  <ellipse cx="400" cy="250" rx="280" ry="200" fill="url(#centerGlow)"/>
+
+  <!-- Outer ring orbits -->
+  <circle cx="400" cy="250" r="190" stroke="#C4956A" stroke-width="0.5" fill="none" stroke-dasharray="4 8" opacity="0.2"/>
+  <circle cx="400" cy="250" r="155" stroke="#C4956A" stroke-width="0.5" fill="none" stroke-dasharray="2 10" opacity="0.15"/>
+
+  <!-- Data node dots on outer ring -->
+  <g opacity="0.5">
+    <circle cx="590" cy="250" r="3.5" fill="#C4956A"/>
+    <circle cx="210" cy="250" r="3.5" fill="#C4956A"/>
+    <circle cx="400" cy="60" r="3.5" fill="#C4956A"/>
+    <circle cx="400" cy="440" r="3.5" fill="#C4956A"/>
+    <circle cx="534" cy="116" r="2.5" fill="#C4956A" opacity="0.6"/>
+    <circle cx="266" cy="116" r="2.5" fill="#C4956A" opacity="0.6"/>
+    <circle cx="534" cy="384" r="2.5" fill="#C4956A" opacity="0.6"/>
+    <circle cx="266" cy="384" r="2.5" fill="#C4956A" opacity="0.6"/>
+  </g>
+
+  <!-- Connecting lines from nodes to shield -->
+  <g stroke="#C4956A" stroke-width="0.7" opacity="0.15">
+    <line x1="590" y1="250" x2="490" y2="250"/>
+    <line x1="210" y1="250" x2="310" y2="250"/>
+    <line x1="400" y1="60" x2="400" y2="130"/>
+    <line x1="400" y1="440" x2="400" y2="375"/>
+    <line x1="534" y1="116" x2="468" y2="158"/>
+    <line x1="266" y1="116" x2="332" y2="158"/>
+  </g>
+
+  <!-- Main shield shape -->
+  <path d="M400 100 L490 140 L490 255 Q490 330 400 368 Q310 330 310 255 L310 140 Z"
+        fill="url(#shieldGrad)"
+        stroke="url(#shieldStroke)"
+        stroke-width="1.5"
+        filter="url(#glow)"/>
+  
+  <!-- Shield inner highlight -->
+  <path d="M400 118 L476 153 L476 257 Q476 323 400 356 Q324 323 324 257 L324 153 Z"
+        fill="none"
+        stroke="#C4956A"
+        stroke-width="0.5"
+        opacity="0.3"/>
+
+  <!-- Lock icon centred in shield -->
+  <!-- Lock body -->
+  <rect x="374" y="232" width="52" height="44" rx="6" 
+        fill="none" stroke="#C4956A" stroke-width="2" 
+        filter="url(#glow)"/>
+  <rect x="374" y="232" width="52" height="44" rx="6" 
+        fill="#C4956A" opacity="0.08"/>
+  
+  <!-- Lock shackle -->
+  <path d="M386 232 L386 218 Q386 200 400 200 Q414 200 414 218 L414 232"
+        fill="none" stroke="#C4956A" stroke-width="2" stroke-linecap="round"
+        filter="url(#glow)"/>
+  
+  <!-- Keyhole -->
+  <circle cx="400" cy="252" r="6" fill="#C4956A" opacity="0.7"/>
+  <rect x="396" y="254" width="8" height="10" rx="2" fill="#C4956A" opacity="0.7"/>
+
+  <!-- Small data particles floating -->
+  <g opacity="0.4" fill="#C4956A">
+    <circle cx="340" cy="180" r="1.5"/>
+    <circle cx="355" cy="195" r="1"/>
+    <circle cx="445" cy="175" r="1.5"/>
+    <circle cx="462" cy="192" r="1"/>
+    <circle cx="335" cy="310" r="1.5"/>
+    <circle cx="350" cy="325" r="1"/>
+    <circle cx="450" cy="315" r="1.5"/>
+    <circle cx="465" cy="300" r="1"/>
+    <circle cx="375" cy="155" r="1"/>
+    <circle cx="425" cy="152" r="1"/>
+  </g>
+
+  <!-- Small trust labels -->
+  <g font-family="'DM Mono', 'Courier New', monospace" fill="#C4956A" font-size="9" letter-spacing="0.12em" text-anchor="middle" opacity="0.5">
+    <text x="590" y="244">ON-DEVICE</text>
+    <text x="210" y="244">GDPR</text>
+    <text x="400" y="52">ENCRYPTED</text>
+    <text x="400" y="455">NO RAW DATA</text>
+    <text x="553" y="110">ZERO SALE</text>
+    <text x="247" y="110">ERASURE</text>
+  </g>
+
+  <!-- Bottom caption line -->
+  <text x="400" y="488" font-family="'DM Mono', 'Courier New', monospace" font-size="10" fill="#C4956A" opacity="0.35" text-anchor="middle" letter-spacing="0.2em">YOUR DATA NEVER LEAVES YOUR DEVICE</text>
+</svg>
