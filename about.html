@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us · Attune</title>
+  <link rel="icon" href="favicon.ico" sizes="any"/>
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <meta name="theme-color" content="#0B0906"/>
+  <meta name="description" content="Attune is built by Cavefish AI, a Cardiff-based emotional AI company. We believe the next generation of human connection starts with how you actually feel."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0B0906; --bg2: #111008; --bg3: #161208; --card: #1A1510;
+      --border: rgba(196,149,106,0.14); --gold: #C4956A; --warm: #E07840;
+      --cream: #EBE1D2; --muted: #7A6E60; --text: #C8BFB0;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; font-weight: 300; line-height: 1.8; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11,9,6,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 5%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: 'Barlow', sans-serif; font-weight: 300; font-size: 1.5rem; color: var(--cream); letter-spacing: 0.04em; }
+    .nav-logo span { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 28px; }
+    .nav-back { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .nav-back:hover { color: var(--gold); text-decoration: none; }
+    .nav-cta { background: var(--gold); color: #0B0906; padding: 9px 20px; border-radius: 2px; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; }
+    .nav-cta:hover { background: #E07840; text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      min-height: 72vh; display: flex; align-items: center;
+      padding: 100px 5% 80px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(196,149,106,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 760px; }
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+    .hero-eyebrow::after { content: ''; flex: 0 0 40px; height: 1px; background: var(--gold); opacity: 0.4; }
+    .hero h1 { font-family: 'Rajdhani', sans-serif; font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-lead { font-size: 1.12rem; line-height: 1.8; max-width: 560px; color: var(--text); }
+
+    /* SECTIONS */
+    section { padding: 100px 5%; }
+    section:nth-child(even) { background: var(--bg2); }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+    .section-eyebrow::after { content: ''; flex: 0 0 32px; height: 1px; background: var(--gold); opacity: 0.4; }
+    .section-title { font-family: 'Rajdhani', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 24px; }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-lead { font-size: 1.04rem; line-height: 1.85; max-width: 620px; }
+
+    /* STORY */
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    @media (max-width: 768px) { .story-grid { grid-template-columns: 1fr; gap: 48px; } }
+    .story-body p { margin-bottom: 20px; font-size: 0.97rem; line-height: 1.85; }
+
+    /* STAT ROW */
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 56px 0; }
+    @media (max-width: 640px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+    .stat-cell { background: var(--card); padding: 28px 24px; text-align: center; }
+    .stat-num { font-family: 'Rajdhani', sans-serif; font-size: 2.4rem; font-weight: 500; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* VALUES */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+    .value-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 32px 28px; }
+    .value-icon { font-size: 1.5rem; margin-bottom: 16px; }
+    .value-title { font-size: 1rem; font-weight: 500; color: var(--cream); margin-bottom: 12px; }
+    .value-body { font-size: 0.9rem; line-height: 1.75; }
+
+    /* TEAM */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    @media (max-width: 768px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .team-grid { grid-template-columns: 1fr; } }
+    .team-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 28px 24px; }
+    .team-avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--bg3); border: 1px solid var(--border); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 1rem; color: var(--gold); }
+    .team-name { font-size: 0.95rem; font-weight: 500; color: var(--cream); margin-bottom: 4px; }
+    .team-role { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+    .team-bio { font-size: 0.85rem; line-height: 1.7; color: var(--muted); }
+
+    /* TECH */
+    .tech-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    @media (max-width: 768px) { .tech-inner { grid-template-columns: 1fr; } }
+    .tech-chip { display: inline-block; background: rgba(196,149,106,0.1); border: 1px solid rgba(196,149,106,0.3); color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 12px; border-radius: 2px; margin-bottom: 20px; }
+    .tech-body p { margin-bottom: 18px; font-size: 0.97rem; }
+    .tech-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .tech-stat { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 20px; }
+    .tech-stat-num { font-family: 'Rajdhani', sans-serif; font-size: 1.8rem; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+    .tech-stat-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* CTA */
+    .about-cta { text-align: center; }
+    .about-cta .section-eyebrow { justify-content: center; }
+    .about-cta .section-eyebrow::after { display: none; }
+    .about-cta .section-title { margin: 0 auto 24px; }
+    .about-cta p { font-size: 1.05rem; max-width: 520px; margin: 0 auto 40px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #0B0906; padding: 14px 32px; border-radius: 2px; font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 400; transition: background 0.25s, transform 0.2s; }
+    .btn-primary:hover { background: var(--warm); transform: translateY(-1px); text-decoration: none; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 40px 5%; text-align: center; }
+    footer p { font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--gold); }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">att<span>u</span>ne</a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Home
+    </a>
+    <a href="/#cta" class="nav-cta">Join the waitlist</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Our story</div>
+    <h1>Dating apps measure<br>everything except the<br><em>one thing that matters.</em></h1>
+    <p class="hero-lead">Attune was built on a simple conviction: that how you feel in response to the world around you is the deepest signal of who you are. And that the right person for you responds to that same world in a way that resonates with yours.</p>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- STORY -->
+<section>
+  <div class="container">
+    <div class="story-grid">
+      <div>
+        <div class="section-eyebrow">The problem</div>
+        <h2 class="section-title">A decade of swiping.<br>Still the same result.</h2>
+      </div>
+      <div class="story-body">
+        <p>Modern dating apps were built on the assumption that attraction is visual and compatibility is self-reported. You upload your best photos. You write a carefully crafted bio. You swipe on faces. And then you're surprised when the conversation goes nowhere.</p>
+        <p>The problem isn't that people are bad at dating. It's that the tools are measuring the wrong thing. A photograph tells you what someone looks like. A questionnaire tells you what someone thinks they want. Neither tells you how someone <em>feels</em> — and feeling is where real connection begins.</p>
+        <p>We started Attune to fix that. Not with another algorithm that optimises for engagement. With science that actually understands human emotion.</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-num">13</div>
+        <div class="stat-label">Industry awards</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Countries of training data</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">42</div>
+        <div class="stat-label">Facial action units</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">Q3&nbsp;'26</div>
+        <div class="stat-label">Public launch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section>
+  <div class="container">
+    <div class="section-eyebrow">What we believe</div>
+    <h2 class="section-title">Principles we don't<br>negotiate on.</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🧬</div>
+        <div class="value-title">Authenticity over performance</div>
+        <p class="value-body">Your involuntary emotional responses are the most honest thing about you. We build technology to read those signals — not to let you game them. The system rewards being real.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <div class="value-title">Privacy by architecture</div>
+        <p class="value-body">We made a fundamental design decision: raw emotional data never leaves your device. What we store is a mathematical pattern, not a biometric record. Your face is yours.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🧠</div>
+        <div class="value-title">Science, not pseudoscience</div>
+        <p class="value-body">EchoDepth is built on Paul Ekman's FACS system — decades of peer-reviewed psychology. We don't make claims we can't evidence. Emotion AI is hard. We do it properly.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌍</div>
+        <div class="value-title">Bias-resistant by design</div>
+        <p class="value-body">Our models were trained across 6 countries and 14 cultures. Emotional expression varies across backgrounds. We built Attune to work for everyone — not just one demographic.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🚫</div>
+        <div class="value-title">No ads. Ever.</div>
+        <p class="value-body">We will never sell your data to advertisers. We will never accept payment to show you a particular profile. Our incentives are aligned with yours: we succeed when you find someone real.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">❤️</div>
+        <div class="value-title">Connection over engagement</div>
+        <p class="value-body">Every other dating app wants you to stay on the app. We want you to leave — because you found someone. Our metrics are matches that become conversations. Conversations that become dates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section>
+  <div class="container">
+    <div class="tech-inner">
+      <div class="tech-body">
+        <div class="tech-chip">Powered by EchoDepth</div>
+        <div class="section-eyebrow">The technology</div>
+        <h2 class="section-title">Emotion AI built by the people who wrote the science.</h2>
+        <p>Attune is powered by EchoDepth — the emotional intelligence engine developed by <strong style="color:var(--cream)">Cavefish AI</strong>, a Cardiff-based company specialising in real-time facial Action Unit analysis.</p>
+        <p>EchoDepth analyses the 42 muscle movements that make up human facial expression — the FACS system originally developed by psychologist Paul Ekman — and maps them to emotional states in real time. No wearables, no contact sensors, no hardware beyond your phone's front camera.</p>
+        <p>Your emotional profile is processed entirely on your device. What we store is an anonymised emotional vector: a mathematical fingerprint of how you respond. It cannot be reverse-engineered to reconstruct your face or identify you.</p>
+        <div class="tech-stats">
+          <div class="tech-stat">
+            <div class="tech-stat-num">42</div>
+            <div class="tech-stat-label">Action units tracked</div>
+          </div>
+          <div class="tech-stat">
+            <div class="tech-stat-num">&lt;200ms</div>
+            <div class="tech-stat-label">Real-time detection</div>
+          </div>
+          <div class="tech-stat">
+            <div class="tech-stat-num">14</div>
+            <div class="tech-stat-label">Cultures trained on</div>
+          </div>
+          <div class="tech-stat">
+            <div class="tech-stat-num">0</div>
+            <div class="tech-stat-label">Raw images stored</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="tech-visual.svg" alt="EchoDepth facial action unit mapping diagram"
+          style="width:100%;border-radius:8px;border:1px solid var(--border);display:block;"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section>
+  <div class="container">
+    <div class="section-eyebrow">The team</div>
+    <h2 class="section-title">Built in Cardiff.<br><em>Thinking globally.</em></h2>
+    <p class="section-lead">Attune is a Cavefish AI product. Cavefish was founded with a focus on emotional AI for enterprise — working with insurers, financial institutions, sports performance teams, and defence organisations before turning that technology toward human connection.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">JP</div>
+        <div class="team-name">JP</div>
+        <div class="team-role">Founder & CEO · Cavefish AI</div>
+        <p class="team-bio">Former head of behavioural analytics across the EU, UK, and US. Led teams at the Royal Mint and Assurant. Built Cavefish AI to make emotional intelligence accessible at scale.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">LS</div>
+        <div class="team-name">Logic Software</div>
+        <div class="team-role">Technology Partner · Cardiff</div>
+        <p class="team-bio">ISO 9001 and Cyber Essentials certified. Clients include NHS, British Airways, Thales, and ABP. Builders of the EchoDepth engine that powers Attune's emotion AI.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">AK</div>
+        <div class="team-name">Alex King</div>
+        <div class="team-role">Partnerships</div>
+        <p class="team-bio">Leading commercial outreach and partnership development, with a focus on sports performance and consumer verticals.</p>
+      </div>
+    </div>
+    <p style="margin-top:32px;font-size:0.88rem;color:var(--muted)">Attune is actively hiring. If you're exceptional at what you do and believe in building technology that respects people, <a href="mailto:hello@attune.love">get in touch</a>.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg2)">
+  <div class="container about-cta">
+    <div class="section-eyebrow">Join us</div>
+    <h2 class="section-title">Be part of dating<br>done <em>differently.</em></h2>
+    <p>We're opening our waitlist ahead of our Q3 2026 UK launch. Early members get six months of premium free and permanent priority access.</p>
+    <a href="/#cta" class="btn-primary">
+      Join the waitlist
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Attune · A <a href="https://cavefish.co.uk" target="_blank">Cavefish AI</a> product · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a> · <a href="safety.html">Safety</a></p>
+</footer>
+
+</body>
+</html>

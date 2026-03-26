@@ -1020,8 +1020,9 @@
       border-radius: 8px;
       overflow: hidden;
       border: 1px solid var(--border);
-      background: var(--bg3);
+      background: #0B0906;
       aspect-ratio: 16/9;
+      cursor: pointer;
     }
 
     .attune-video {
@@ -1031,30 +1032,42 @@
       object-fit: cover;
     }
 
-    .attune-play-btn {
+    .attune-play-overlay {
       position: absolute;
       inset: 0;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 14px;
-      background: rgba(11,9,6,0.45);
-      border: none;
-      cursor: pointer;
-      color: var(--gold);
-      font-family: inherit;
-      font-size: 0.8rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      transition: background 0.3s;
+      background: rgba(11,9,6,0.38);
+      transition: background 0.3s, opacity 0.3s;
     }
 
-    .attune-play-btn:hover { background: rgba(11,9,6,0.2); }
-    .attune-play-btn.playing { background: transparent; }
-    .attune-play-btn.playing:hover { background: rgba(11,9,6,0.35); }
+    .attune-video-wrap.is-playing .attune-play-overlay {
+      background: transparent;
+      opacity: 0;
+    }
 
-    .attune-play-btn svg { width: 56px; height: 56px; }
+    .attune-video-wrap.is-playing:hover .attune-play-overlay {
+      opacity: 1;
+      background: rgba(11,9,6,0.25);
+    }
+
+    .attune-play-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-family: inherit;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .play-label { color: var(--gold); }
 
 
 
@@ -1248,26 +1261,28 @@
       <p class="section-lead fade-in">No endless questionnaires. No crafting the perfect bio. Just you, being real.</p>
 
       <!-- Attune video player -->
-      <div class="attune-video-wrap fade-in">
+      <div class="attune-video-wrap fade-in" id="attune-video-wrap">
         <video
           id="attune-video"
           src="attune-video.mp4"
           playsinline
-          preload="metadata"
-          poster=""
+          preload="auto"
           class="attune-video"
         ></video>
-        <button class="attune-play-btn" id="attune-play-btn" aria-label="Play video" onclick="toggleAttuneVideo()">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.2"/>
-            <path id="play-icon" d="M11 9.5l9 4.5-9 4.5V9.5Z" fill="currentColor"/>
-            <g id="pause-icon" style="display:none">
-              <rect x="9" y="9" width="3.5" height="10" rx="1" fill="currentColor"/>
-              <rect x="15.5" y="9" width="3.5" height="10" rx="1" fill="currentColor"/>
-            </g>
-          </svg>
-          <span id="play-label">Watch the clip</span>
-        </button>
+        <div class="attune-play-overlay" id="attune-overlay" onclick="toggleAttuneVideo()">
+          <div class="attune-play-btn" id="attune-play-btn" aria-label="Play video">
+            <svg class="icon-play" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5" fill="rgba(11,9,6,0.5)"/>
+              <path d="M26 21l22 11-22 11V21Z" fill="currentColor"/>
+            </svg>
+            <svg class="icon-pause" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="display:none">
+              <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5" fill="rgba(11,9,6,0.5)"/>
+              <rect x="22" y="20" width="8" height="24" rx="2" fill="currentColor"/>
+              <rect x="34" y="20" width="8" height="24" rx="2" fill="currentColor"/>
+            </svg>
+            <span class="play-label">Watch the clip</span>
+          </div>
+        </div>
       </div>
 
       <div class="steps-grid">
@@ -1746,7 +1761,7 @@
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="/about">About us</a></li>
+          <li><a href="about.html">About us</a></li>
           <li><a href="https://cavefish.co.uk">Cavefish AI</a></li>
         </ul>
       </div>
@@ -1833,33 +1848,41 @@
     }
   </script>
   <script>
-    function toggleAttuneVideo() {
-      const vid = document.getElementById('attune-video');
-      const btn = document.getElementById('attune-play-btn');
-      const playIcon = document.getElementById('play-icon');
-      const pauseIcon = document.getElementById('pause-icon');
-      const label = document.getElementById('play-label');
-      if (vid.paused) {
-        vid.play();
-        btn.classList.add('playing');
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'block';
-        label.textContent = 'Pause';
-      } else {
-        vid.pause();
-        btn.classList.remove('playing');
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
-        label.textContent = 'Watch the clip';
+    (function() {
+      var vid = document.getElementById('attune-video');
+      var wrap = document.getElementById('attune-video-wrap');
+      var iconPlay = wrap.querySelector('.icon-play');
+      var iconPause = wrap.querySelector('.icon-pause');
+      var label = wrap.querySelector('.play-label');
+
+      function setPlaying(playing) {
+        if (playing) {
+          wrap.classList.add('is-playing');
+          iconPlay.style.display = 'none';
+          iconPause.style.display = 'block';
+          label.textContent = 'Pause';
+        } else {
+          wrap.classList.remove('is-playing');
+          iconPlay.style.display = 'block';
+          iconPause.style.display = 'none';
+        }
       }
-    }
-    document.getElementById('attune-video').addEventListener('ended', function() {
-      const btn = document.getElementById('attune-play-btn');
-      document.getElementById('play-icon').style.display = 'block';
-      document.getElementById('pause-icon').style.display = 'none';
-      document.getElementById('play-label').textContent = 'Watch again';
-      btn.classList.remove('playing');
-    });
+
+      window.toggleAttuneVideo = function() {
+        if (vid.paused || vid.ended) {
+          vid.play().catch(function(){});
+        } else {
+          vid.pause();
+        }
+      };
+
+      vid.addEventListener('play', function() { setPlaying(true); });
+      vid.addEventListener('pause', function() { setPlaying(false); });
+      vid.addEventListener('ended', function() {
+        setPlaying(false);
+        label.textContent = 'Watch again';
+      });
+    })();
   </script>
 </body>
 </html>
