@@ -31,13 +31,9 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Attune",
+    "alternateName": "Attune Dating",
     "url": "https://attune.love",
-    "description": "AI-powered emotion matching dating app",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://attune.love/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "description": "Emotion AI-powered dating app that matches you based on how you genuinely feel, not just what you look like. Launching Q3 2026."
   }
   </script>
 
@@ -47,12 +43,49 @@
     "@type": "Organization",
     "name": "Attune",
     "url": "https://attune.love",
-    "logo": "https://attune.love/logo.png",
+    "logo": "https://attune.love/favicon-256.png",
+    "description": "Emotion AI-powered dating platform built by Cavefish AI.",
+    "foundingDate": "2025",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Cardiff, Wales, UK"
+    },
+    "contactPoint": [
+      {"@type": "ContactPoint", "email": "hello@attune.love", "contactType": "customer support"},
+      {"@type": "ContactPoint", "email": "safety@attune.love", "contactType": "safety"},
+      {"@type": "ContactPoint", "email": "privacy@attune.love", "contactType": "privacy"}
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Cavefish AI",
+      "url": "https://cavefish.co.uk",
+      "address": {"@type": "PostalAddress", "addressLocality": "Cardiff", "addressRegion": "Wales", "addressCountry": "GB"}
+    },
     "sameAs": [
       "https://instagram.com/attunelove",
       "https://tiktok.com/@attunelove"
-    ],
-    "parentOrganization": {
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Attune",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "LifestyleApplication",
+    "applicationSubCategory": "Dating",
+    "description": "The first dating app that matches you based on genuine emotional compatibility using facial expression analysis. No fake profiles. No swiping. Just real connection.",
+    "url": "https://attune.love",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "validFrom": "2026-07-01"
+    },
+    "creator": {
       "@type": "Organization",
       "name": "Cavefish AI",
       "url": "https://cavefish.co.uk"
@@ -68,64 +101,34 @@
       {
         "@type": "Question",
         "name": "Is Attune safe to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Attune uses on-device processing wherever possible, meaning your emotional data never leaves your phone. We are GDPR compliant and you can delete all your data at any time, instantly and permanently."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Attune uses on-device processing, meaning your emotional data never leaves your phone. We are UK GDPR compliant and you can permanently delete all your data at any time."}
       },
       {
         "@type": "Question",
         "name": "Are there fake profiles on Attune?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Fake profiles are nearly impossible on Attune. Every user must complete a live emotion-capture session to create their profile - bots and scammers cannot fake genuine emotional responses. This makes Attune the most fraud-resistant dating app available."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "Fake profiles are practically impossible. Every user must complete a live emotion-capture session — bots and catfish accounts cannot fake involuntary micro-expressions in real time."}
       },
       {
         "@type": "Question",
-        "name": "How does emotion matching actually work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You watch a short curated video. Our EchoDepth technology, developed by Cavefish AI, measures subtle facial muscle movements called Action Units in real time, mapping your emotional responses across valence, arousal, and dominance. We then match you with people whose emotional fingerprints complement yours."
-        }
+        "name": "How does emotion-based matching work?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You watch a short video. EchoDepth technology analyses 42 facial muscle movements in real time, mapping your emotional fingerprint across valence, arousal, and openness. We then match you with people whose emotional profiles complement yours."}
       },
       {
         "@type": "Question",
         "name": "What happens to my emotional data?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your raw emotional data is processed on-device and never stored or sold. We retain only an anonymised compatibility vector, a mathematical representation of your emotional fingerprint, which you can delete at any time. We will never sell or share your data with advertisers."
-        }
+        "acceptedAnswer": {"@type": "Answer", "text": "Raw emotional data is processed entirely on your device and never transmitted. We retain only an anonymised emotional vector — a mathematical pattern with no biometric identifiers — which you can delete at any time. We never sell your data."}
       },
       {
         "@type": "Question",
-        "name": "Can someone fake their emotions to game the app?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our technology measures involuntary micro-expressions, subtle facial movements that happen in under 200 milliseconds. These are extremely difficult to consciously control. People who try to fake responses simply generate an inaccurate emotional profile, which means they get poor matches. The system rewards authenticity."
-        }
+        "name": "When does Attune launch?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Attune launches in the UK in Q3 2026. Join the waitlist at attune.love to get early access and six months of premium free."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can someone fake their emotions?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Our technology detects involuntary micro-expressions — facial movements lasting under 200 milliseconds that are extremely difficult to consciously control. Attempting to fake responses produces an inaccurate emotional profile, resulting in poor matches. The system rewards authenticity."}
       }
     ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Attune",
-    "operatingSystem": "iOS, Android",
-    "applicationCategory": "LifestyleApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "GBP"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "2847"
-    }
   }
   </script>
 

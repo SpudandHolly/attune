@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Block private/admin areas
+# Block app functionality routes (not yet live)
 Disallow: /admin/
 Disallow: /api/
 Disallow: /dashboard/
@@ -12,16 +12,10 @@ Disallow: /profile/
 Disallow: /onboarding/
 Disallow: /auth/
 
-# Allow important SEO pages
-Allow: /blog/
-Allow: /about/
-Allow: /press/
-Allow: /safety/
-
-# Sitemap locations
+# Sitemap
 Sitemap: https://attune.love/sitemap.xml
 
-# Crawl-delay for considerate bots
+# Crawl delay
 Crawl-delay: 10
 
 # AI training data opt-out
@@ -38,4 +32,7 @@ User-agent: anthropic-ai
 Disallow: /
 
 User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
 Disallow: /
