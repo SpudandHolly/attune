@@ -13,7 +13,7 @@ Disallow: /onboarding/
 Disallow: /auth/
 
 # Sitemap
-Sitemap: https://attune.love/sitemap.xml
+Sitemap: https://attunechemistry.com/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 10

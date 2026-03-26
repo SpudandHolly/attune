@@ -3,46 +3,46 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://attune.love/</loc>
+    <loc>https://attunechemistry.com/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://attune.love/og-image.jpg</image:loc>
+      <image:loc>https://attunechemistry.com/og-image.jpg</image:loc>
       <image:title>Attune — Match at the Speed of Feeling</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://attune.love/about.html</loc>
+    <loc>https://attunechemistry.com/about.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://attune.love/safety.html</loc>
+    <loc>https://attunechemistry.com/safety.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://attune.love/privacy.html</loc>
+    <loc>https://attunechemistry.com/privacy.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://attune.love/terms.html</loc>
+    <loc>https://attunechemistry.com/terms.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://attune.love/cookies.html</loc>
+    <loc>https://attunechemistry.com/cookies.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
