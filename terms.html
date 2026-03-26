@@ -10,68 +10,96 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
   <meta name="theme-color" content="#0B0906"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #0B0906; --bg2: #111008; --card: #1A1510;
-      --border: rgba(196,149,106,0.14); --gold: #C4956A;
-      --cream: #EBE1D2; --muted: #7A6E60; --text: #C8BFB0;
+      --bg:#0B0906; --bg2:#131009; --bg3:#1C1610; --card:#1F1812;
+      --border:rgba(196,149,106,0.15); --gold:#C4956A; --gold-lt:#E2C4A0;
+      --cream:#F0E8D8; --warm:#E87D45; --text:#E8DDD0; --muted:#8A7A6A;
+      --red:#C46A6A;
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'DM Sans',system-ui,sans-serif;
     }
-    html { font-size: 16px; }
-    body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; font-weight: 300; line-height: 1.8; }
-    a { color: var(--gold); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(11,9,6,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 18px 5%; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: 'Barlow', sans-serif; font-weight: 300; font-size: 1.5rem; color: var(--cream); letter-spacing: 0.04em; }
-    .nav-logo span { color: var(--gold); }
-    .nav-back { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-    .nav-back:hover { color: var(--gold); text-decoration: none; }
-    .page-wrap { max-width: 760px; margin: 0 auto; padding: 80px 5% 120px; }
-    .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
-    .page-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 300; color: var(--cream); line-height: 1.2; margin-bottom: 12px; }
-    .page-date { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); margin-bottom: 56px; }
-    .page-date::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--border); vertical-align: middle; margin-right: 12px; }
-    h2 { font-size: 1.15rem; font-weight: 500; color: var(--cream); margin: 48px 0 14px; letter-spacing: 0.02em; }
-    h3 { font-size: 0.95rem; font-weight: 500; color: var(--gold); margin: 28px 0 10px; letter-spacing: 0.04em; }
-    p { margin-bottom: 18px; font-size: 0.97rem; }
-    ul { margin: 0 0 18px 20px; }
-    ul li { margin-bottom: 8px; font-size: 0.97rem; }
-    .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
-    .contact-box { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 28px 32px; margin-top: 48px; }
-    footer { border-top: 1px solid var(--border); padding: 40px 5%; text-align: center; }
-    footer p { font-size: 0.8rem; color: var(--muted); }
-    footer a { color: var(--muted); }
-    footer a:hover { color: var(--gold); }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.75;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
+    h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2;}
+    h1{font-size:clamp(2.4rem,5vw,3.8rem);letter-spacing:-0.02em;color:var(--cream);margin-bottom:12px;}
+    h2{font-size:1.6rem;color:var(--cream);margin:52px 0 14px;}
+    h3{font-size:1.1rem;color:var(--gold);margin:32px 0 10px;font-weight:400;}
+    p{margin-bottom:18px;font-size:0.97rem;color:var(--muted);}
+    strong{color:var(--text);font-weight:500;}
+    a{color:var(--gold);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    ul{margin:0 0 18px 22px;} ul li{margin-bottom:8px;font-size:0.97rem;color:var(--muted);}
+    code{font-family:monospace;font-size:0.85em;background:var(--bg3);padding:2px 6px;border-radius:2px;color:var(--gold-lt);}
+
+    nav{
+      position:fixed;top:0;width:100%;z-index:100;
+      padding:22px 5%;display:flex;align-items:center;justify-content:space-between;
+      background:linear-gradient(to bottom,rgba(11,9,6,0.98),transparent);
+      backdrop-filter:blur(12px);border-bottom:1px solid var(--border);
+    }
+    .nav-logo{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--cream);letter-spacing:0.05em;}
+    .nav-logo span{color:var(--gold);font-style:italic;}
+    .nav-back{display:flex;align-items:center;gap:8px;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);transition:color 0.3s;}
+    .nav-back:hover{color:var(--gold);text-decoration:none;}
+    .nav-cta{background:var(--warm);color:#0B0906 !important;padding:10px 24px;border-radius:2px;font-weight:500;font-family:var(--sans);font-size:0.82rem;transition:opacity 0.3s;}
+    .nav-cta:hover{opacity:0.85;text-decoration:none;}
+    .nav-right{display:flex;align-items:center;gap:24px;}
+
+    .page-wrap{max-width:780px;margin:0 auto;padding:140px 5% 120px;}
+    .page-eyebrow{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+    .page-eyebrow::after{content:'';flex:1;max-width:60px;height:1px;background:var(--gold);opacity:0.4;}
+    .page-date{font-size:0.78rem;letter-spacing:0.06em;color:var(--muted);margin-bottom:52px;padding-bottom:28px;border-bottom:1px solid var(--border);}
+    .divider{border:none;border-top:1px solid var(--border);margin:48px 0;}
+
+    .contact-box{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:32px;margin-top:52px;}
+    .contact-box h3{margin-top:0 !important;}
+
+    footer{border-top:1px solid var(--border);padding:60px 5% 40px;}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;max-width:1200px;margin-left:auto;margin-right:auto;}
+    .footer-brand .nav-logo{display:inline-block;margin-bottom:16px;font-size:1.4rem;}
+    .footer-brand p{font-size:0.85rem;max-width:280px;line-height:1.7;}
+    .footer-brand .powered{margin-top:20px;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+    .footer-brand .powered a{color:var(--gold);}
+    .footer-col h5{font-family:var(--serif);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:20px;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;margin:0;}
+    .footer-col ul li a{font-size:0.85rem;color:var(--muted);transition:color 0.3s;}
+    .footer-col ul li a:hover{color:var(--gold);text-decoration:none;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);max-width:1200px;margin:0 auto;}
+    @media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.footer-inner{grid-template-columns:1fr;}}
+    
   </style>
 </head>
 <body>
 <nav>
   <a href="/" class="nav-logo">att<span>u</span>ne</a>
-  <a href="/" class="nav-back">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to home
-  </a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Home
+    </a>
+    <a href="/#cta" class="nav-cta">Join waitlist</a>
+  </div>
 </nav>
 
 <div class="page-wrap">
   <div class="page-eyebrow">Legal</div>
-  <h1 class="page-title">Terms of Service</h1>
+  <h1>Terms of Service</h1>
   <p class="page-date">Last updated: 1 March 2026</p>
-
-  <p>Please read these Terms of Service carefully before using Attune. By registering or using the platform, you agree to be bound by them. If you do not agree, please do not use Attune.</p>
-
+  
+  <p>Please read these Terms carefully before using Attune. By registering or using the platform, you agree to be bound by them.</p>
   <hr class="divider"/>
-
   <h2>1. About Attune</h2>
-  <p>Attune is an emotion-based dating platform operated by Cavefish AI Ltd, registered in England and Wales. The platform uses facial expression analysis technology to generate emotional profiles and suggest compatible matches. Attune is currently in closed beta with a planned public launch of Q3 2026.</p>
-
+  <p>Attune is an emotion-based dating platform operated by Cavefish AI Ltd, registered in England and Wales. The platform uses facial expression analysis to generate emotional profiles and suggest compatible matches. Public launch is planned for Q3 2026.</p>
   <h2>2. Eligibility</h2>
-  <p>You must be at least 18 years old to use Attune. By creating an account, you confirm that you are 18 or over. We reserve the right to terminate accounts where we have reason to believe this condition is not met.</p>
-
+  <p>You must be at least 18 years old to use Attune. By creating an account you confirm you meet this requirement.</p>
   <h2>3. Your account</h2>
-  <p>You are responsible for maintaining the security of your account credentials. You may not share your account with another person or create multiple accounts. You must provide accurate and truthful information at registration and keep it up to date.</p>
-
+  <p>You are responsible for maintaining the security of your credentials. You may not share your account or create multiple accounts. You must provide accurate information at registration.</p>
   <h2>4. Acceptable use</h2>
   <p>You agree not to use Attune to:</p>
   <ul>
@@ -79,49 +107,68 @@
     <li>Post false, misleading, or fraudulent content.</li>
     <li>Impersonate another person or entity.</li>
     <li>Solicit money, gifts, or financial information from other users.</li>
-    <li>Promote or engage in commercial activity without our consent.</li>
     <li>Attempt to reverse-engineer, scrape, or interfere with the platform.</li>
-    <li>Transmit malware, spam, or unsolicited communications.</li>
     <li>Violate any applicable law or regulation.</li>
   </ul>
-  <p>Violations may result in immediate account suspension or termination.</p>
-
   <h2>5. Emotional data and consent</h2>
-  <p>Attune collects emotional response data through facial expression analysis during onboarding. This process requires your active and informed consent, which you provide at the point of capture. You may withdraw consent and request deletion of your emotional data at any time. See our <a href="privacy.html">Privacy Policy</a> for full details of how this data is handled.</p>
-
-  <h2>6. Matching and no guarantee of results</h2>
-  <p>Attune uses technology to suggest compatible matches based on emotional profiles. We do not guarantee any specific outcome, match, relationship, or result from using the platform. Compatibility suggestions are probabilistic and informational only.</p>
-
+  <p>Attune collects emotional response data through facial expression analysis during onboarding. This requires your active and informed consent. You may withdraw consent and request deletion at any time. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <h2>6. No guarantee of results</h2>
+  <p>Attune uses technology to suggest compatible matches. We do not guarantee any specific outcome, match, or relationship. Compatibility suggestions are probabilistic and informational only.</p>
   <h2>7. User content</h2>
-  <p>Any content you submit to Attune — including profile information, photos, and messages — remains your intellectual property. By submitting it, you grant Cavefish AI Ltd a non-exclusive, royalty-free licence to use, store, and display it solely for the purpose of operating the platform. We will not use your content in marketing without your explicit consent.</p>
-
+  <p>Content you submit remains your property. By submitting it you grant us a non-exclusive, royalty-free licence to use it solely to operate the platform. We will not use your content in marketing without explicit consent.</p>
   <h2>8. Safety</h2>
-  <p>You are responsible for your own safety when interacting with other users, whether online or in person. Attune provides safety tools and reporting mechanisms but cannot guarantee the conduct of other users. See our <a href="safety.html">Safety Centre</a> for guidance.</p>
-
-  <h2>9. Intellectual property</h2>
-  <p>All technology, branding, design, and content belonging to Attune and Cavefish AI Ltd is protected by intellectual property law. You may not reproduce, modify, or distribute it without our written permission.</p>
-
-  <h2>10. Limitation of liability</h2>
-  <p>To the fullest extent permitted by law, Cavefish AI Ltd is not liable for any indirect, incidental, special, or consequential damages arising from your use of Attune. Our total liability to you for any claim shall not exceed the amount you paid us in the 12 months preceding the claim, or £100, whichever is greater.</p>
-
-  <h2>11. Termination</h2>
-  <p>You may delete your account at any time from within the app. We may suspend or terminate your account if you breach these Terms, or for any other reason at our discretion, with or without notice. On termination, your data will be handled in accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
-
-  <h2>12. Governing law</h2>
-  <p>These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
-
-  <h2>13. Changes to these terms</h2>
-  <p>We may update these Terms from time to time. Continued use of Attune after changes are posted constitutes your acceptance of the revised Terms. We will give you reasonable notice of material changes.</p>
-
+  <p>You are responsible for your own safety when interacting with other users. See our <a href="safety.html">Safety Centre</a> for guidance.</p>
+  <h2>9. Limitation of liability</h2>
+  <p>To the fullest extent permitted by law, our total liability for any claim shall not exceed the amount you paid us in the preceding 12 months or £100, whichever is greater.</p>
+  <h2>10. Governing law</h2>
+  <p>These Terms are governed by the laws of England and Wales. Disputes are subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+  <h2>11. Changes</h2>
+  <p>We may update these Terms. Continued use after changes constitutes acceptance. We will give reasonable notice of material changes.</p>
   <div class="contact-box">
-    <h3 style="margin-top:0">Questions?</h3>
+    <h3>Questions?</h3>
     <p>Cavefish AI Ltd, Cardiff, Wales, UK</p>
     <p><a href="mailto:legal@attune.love">legal@attune.love</a></p>
   </div>
+
 </div>
 
 <footer>
-  <p>© 2026 Attune · A Cavefish AI product · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a> · <a href="safety.html">Safety</a></p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo">att<span>u</span>ne</a>
+      <p>Match at the speed of feeling. Emotion AI-powered dating built on science, designed for real human connection.</p>
+      <p class="powered">Powered by <a href="https://cavefish.co.uk">Cavefish AI</a> · EchoDepth technology</p>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <ul>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#why">Why Attune</a></li>
+        <li><a href="/#tech">The technology</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://cavefish.co.uk">Cavefish AI</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+        <li><a href="cookies.html">Cookie policy</a></li>
+        <li><a href="safety.html">Safety centre</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Attune · A Cavefish AI product · Registered in England & Wales</p>
+    <p>Made with ❤ in Cardiff, Wales</p>
+  </div>
 </footer>
 </body>
 </html>

@@ -1267,7 +1267,7 @@
           id="attune-video"
           src="attune-video.mp4"
           playsinline
-          preload="auto"
+          preload="metadata"
           class="attune-video"
         ></video>
         <div class="attune-play-overlay" id="attune-overlay" onclick="toggleAttuneVideo()">
@@ -1849,41 +1849,43 @@
     }
   </script>
   <script>
-    (function() {
-      var vid = document.getElementById('attune-video');
-      var wrap = document.getElementById('attune-video-wrap');
-      var iconPlay = wrap.querySelector('.icon-play');
+    document.addEventListener('DOMContentLoaded', function() {
+      var vid   = document.getElementById('attune-video');
+      var wrap  = document.getElementById('attune-video-wrap');
+      if (!vid || !wrap) return;
+      var iconPlay  = wrap.querySelector('.icon-play');
       var iconPause = wrap.querySelector('.icon-pause');
-      var label = wrap.querySelector('.play-label');
+      var label     = wrap.querySelector('.play-label');
 
       function setPlaying(playing) {
-        if (playing) {
-          wrap.classList.add('is-playing');
-          iconPlay.style.display = 'none';
-          iconPause.style.display = 'block';
-          label.textContent = 'Pause';
-        } else {
-          wrap.classList.remove('is-playing');
-          iconPlay.style.display = 'block';
-          iconPause.style.display = 'none';
-        }
+        wrap.classList.toggle('is-playing', playing);
+        iconPlay.style.display  = playing ? 'none'  : 'block';
+        iconPause.style.display = playing ? 'block' : 'none';
+        if (label) label.textContent = playing ? 'Pause' : 'Watch the clip';
       }
 
       window.toggleAttuneVideo = function() {
         if (vid.paused || vid.ended) {
-          vid.play().catch(function(){});
+          var p = vid.play();
+          if (p !== undefined) {
+            p.then(function() {}).catch(function(err) {
+              // Autoplay blocked — try muted then unmute
+              vid.muted = true;
+              vid.play().then(function() { vid.muted = false; }).catch(function(){});
+            });
+          }
         } else {
           vid.pause();
         }
       };
 
-      vid.addEventListener('play', function() { setPlaying(true); });
-      vid.addEventListener('pause', function() { setPlaying(false); });
-      vid.addEventListener('ended', function() {
+      vid.addEventListener('play',   function() { setPlaying(true);  });
+      vid.addEventListener('pause',  function() { setPlaying(false); });
+      vid.addEventListener('ended',  function() {
         setPlaying(false);
-        label.textContent = 'Watch again';
+        if (label) label.textContent = 'Watch again';
       });
-    })();
+    });
   </script>
 </body>
 </html>

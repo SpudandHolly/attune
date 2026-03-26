@@ -10,172 +10,173 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
   <meta name="theme-color" content="#0B0906"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #0B0906; --bg2: #111008; --card: #1A1510; --border: rgba(196,149,106,0.14); --gold: #C4956A; --cream: #EBE1D2; --muted: #7A6E60; --text: #C8BFB0; --red: #C46A6A; }
-    html { font-size: 16px; }
-    body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; font-weight: 300; line-height: 1.8; }
-    a { color: var(--gold); text-decoration: none; } a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(11,9,6,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 18px 5%; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: 'Barlow', sans-serif; font-weight: 300; font-size: 1.5rem; color: var(--cream); letter-spacing: 0.04em; }
-    .nav-logo span { color: var(--gold); }
-    .nav-back { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-    .nav-back:hover { color: var(--gold); text-decoration: none; }
-    .page-wrap { max-width: 760px; margin: 0 auto; padding: 80px 5% 120px; }
-    .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
-    .page-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 300; color: var(--cream); line-height: 1.2; margin-bottom: 12px; }
-    .page-date { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--muted); margin-bottom: 56px; }
-    .page-date::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--border); vertical-align: middle; margin-right: 12px; }
-    h2 { font-size: 1.15rem; font-weight: 500; color: var(--cream); margin: 48px 0 14px; }
-    h3 { font-size: 0.95rem; font-weight: 500; color: var(--gold); margin: 28px 0 10px; letter-spacing: 0.04em; }
-    p { margin-bottom: 18px; font-size: 0.97rem; }
-    ul { margin: 0 0 18px 20px; } ul li { margin-bottom: 8px; font-size: 0.97rem; }
-    .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
-
-    .emergency-box {
-      background: rgba(196,106,106,0.08);
-      border: 1px solid rgba(196,106,106,0.3);
-      border-radius: 4px;
-      padding: 28px 32px;
-      margin-bottom: 48px;
+    :root {
+      --bg:#0B0906; --bg2:#131009; --bg3:#1C1610; --card:#1F1812;
+      --border:rgba(196,149,106,0.15); --gold:#C4956A; --gold-lt:#E2C4A0;
+      --cream:#F0E8D8; --warm:#E87D45; --text:#E8DDD0; --muted:#8A7A6A;
+      --red:#C46A6A;
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'DM Sans',system-ui,sans-serif;
     }
-    .emergency-box h3 { color: var(--red); margin-top: 0; }
-    .emergency-box p { margin-bottom: 8px; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.75;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
+    h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2;}
+    h1{font-size:clamp(2.4rem,5vw,3.8rem);letter-spacing:-0.02em;color:var(--cream);margin-bottom:12px;}
+    h2{font-size:1.6rem;color:var(--cream);margin:52px 0 14px;}
+    h3{font-size:1.1rem;color:var(--gold);margin:32px 0 10px;font-weight:400;}
+    p{margin-bottom:18px;font-size:0.97rem;color:var(--muted);}
+    strong{color:var(--text);font-weight:500;}
+    a{color:var(--gold);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    ul{margin:0 0 18px 22px;} ul li{margin-bottom:8px;font-size:0.97rem;color:var(--muted);}
+    code{font-family:monospace;font-size:0.85em;background:var(--bg3);padding:2px 6px;border-radius:2px;color:var(--gold-lt);}
 
-    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
-    @media (max-width: 560px) { .card-grid { grid-template-columns: 1fr; } }
-    .safety-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 24px; }
-    .safety-card-icon { font-size: 1.6rem; margin-bottom: 12px; }
-    .safety-card h3 { margin: 0 0 8px; color: var(--cream); font-size: 0.92rem; letter-spacing: 0; }
-    .safety-card p { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.65; }
+    nav{
+      position:fixed;top:0;width:100%;z-index:100;
+      padding:22px 5%;display:flex;align-items:center;justify-content:space-between;
+      background:linear-gradient(to bottom,rgba(11,9,6,0.98),transparent);
+      backdrop-filter:blur(12px);border-bottom:1px solid var(--border);
+    }
+    .nav-logo{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--cream);letter-spacing:0.05em;}
+    .nav-logo span{color:var(--gold);font-style:italic;}
+    .nav-back{display:flex;align-items:center;gap:8px;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);transition:color 0.3s;}
+    .nav-back:hover{color:var(--gold);text-decoration:none;}
+    .nav-cta{background:var(--warm);color:#0B0906 !important;padding:10px 24px;border-radius:2px;font-weight:500;font-family:var(--sans);font-size:0.82rem;transition:opacity 0.3s;}
+    .nav-cta:hover{opacity:0.85;text-decoration:none;}
+    .nav-right{display:flex;align-items:center;gap:24px;}
 
-    .contact-box { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 28px 32px; margin-top: 48px; }
-    footer { border-top: 1px solid var(--border); padding: 40px 5%; text-align: center; }
-    footer p { font-size: 0.8rem; color: var(--muted); } footer a { color: var(--muted); } footer a:hover { color: var(--gold); }
+    .page-wrap{max-width:780px;margin:0 auto;padding:140px 5% 120px;}
+    .page-eyebrow{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+    .page-eyebrow::after{content:'';flex:1;max-width:60px;height:1px;background:var(--gold);opacity:0.4;}
+    .page-date{font-size:0.78rem;letter-spacing:0.06em;color:var(--muted);margin-bottom:52px;padding-bottom:28px;border-bottom:1px solid var(--border);}
+    .divider{border:none;border-top:1px solid var(--border);margin:48px 0;}
+
+    .contact-box{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:32px;margin-top:52px;}
+    .contact-box h3{margin-top:0 !important;}
+
+    footer{border-top:1px solid var(--border);padding:60px 5% 40px;}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;max-width:1200px;margin-left:auto;margin-right:auto;}
+    .footer-brand .nav-logo{display:inline-block;margin-bottom:16px;font-size:1.4rem;}
+    .footer-brand p{font-size:0.85rem;max-width:280px;line-height:1.7;}
+    .footer-brand .powered{margin-top:20px;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+    .footer-brand .powered a{color:var(--gold);}
+    .footer-col h5{font-family:var(--serif);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:20px;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;margin:0;}
+    .footer-col ul li a{font-size:0.85rem;color:var(--muted);transition:color 0.3s;}
+    .footer-col ul li a:hover{color:var(--gold);text-decoration:none;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);max-width:1200px;margin:0 auto;}
+    @media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.footer-inner{grid-template-columns:1fr;}}
+    
+    .emergency-box{{background:rgba(196,106,106,0.08);border:1px solid rgba(196,106,106,0.3);border-radius:4px;padding:28px 32px;margin-bottom:48px;}}
+    .emergency-box h3{{color:var(--red) !important;margin-top:0 !important;}}
+    .card-grid{{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:32px 0;background:var(--border);border:1px solid var(--border);}}
+    .safety-card{{background:var(--card);padding:28px;}}
+    .safety-icon{{font-size:1.4rem;margin-bottom:12px;}}
+    .safety-card h4{{font-family:var(--serif);font-size:1.1rem;color:var(--cream);margin-bottom:8px;}}
+    .safety-card p{{font-size:0.88rem;line-height:1.7;margin:0;}}
+    @media(max-width:560px){{.card-grid{{grid-template-columns:1fr;}}}}
+
   </style>
 </head>
 <body>
 <nav>
   <a href="/" class="nav-logo">att<span>u</span>ne</a>
-  <a href="/" class="nav-back">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to home
-  </a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Home
+    </a>
+    <a href="/#cta" class="nav-cta">Join waitlist</a>
+  </div>
 </nav>
 
 <div class="page-wrap">
   <div class="page-eyebrow">Your safety</div>
-  <h1 class="page-title">Safety Centre</h1>
+  <h1>Safety Centre</h1>
   <p class="page-date">Last updated: 1 March 2026</p>
-
-  <p>Safety is foundational to Attune — not an afterthought. We've built anti-fraud and authenticity verification into the core technology. But technology alone isn't enough. Here's everything you need to stay safe on Attune and when meeting people in person.</p>
-
+  
+  <p>Safety is foundational to Attune — not an afterthought. We've built anti-fraud and authenticity verification into the core technology. But technology alone isn't enough.</p>
   <div class="emergency-box">
     <h3>In immediate danger?</h3>
-    <p>If you are in immediate danger, call <strong>999</strong> (UK) or your local emergency services.</p>
-    <p>For non-emergency police matters: <strong>101</strong> (UK).</p>
-    <p>To report something on Attune urgently: <a href="mailto:safety@attune.love">safety@attune.love</a></p>
+    <p>Call <strong>999</strong> (UK) or your local emergency services. Non-emergency police: <strong>101</strong>.</p>
+    <p>Urgent Attune safety report: <a href="mailto:safety@attune.love">safety@attune.love</a></p>
   </div>
-
   <hr class="divider"/>
-
   <h2>How Attune protects you</h2>
   <div class="card-grid">
-    <div class="safety-card">
-      <div class="safety-card-icon">🎭</div>
-      <h3>Zero fake profiles</h3>
-      <p>Every profile requires a live emotion-capture session. Bots and catfish accounts cannot fake involuntary micro-expressions — they require a real human face, in real time.</p>
-    </div>
-    <div class="safety-card">
-      <div class="safety-card-icon">🔒</div>
-      <h3>On-device processing</h3>
-      <p>Your raw emotional data and facial video never leave your device. We store only an anonymised mathematical vector that cannot be reverse-engineered.</p>
-    </div>
-    <div class="safety-card">
-      <div class="safety-card-icon">🚨</div>
-      <h3>In-app reporting</h3>
-      <p>You can report any user or conversation in one tap. All reports are reviewed by our safety team within 24 hours.</p>
-    </div>
-    <div class="safety-card">
-      <div class="safety-card-icon">🚫</div>
-      <h3>Block and unmatch</h3>
-      <p>Block or unmatch anyone instantly. Blocked users cannot see your profile or contact you. No explanation required.</p>
-    </div>
-    <div class="safety-card">
-      <div class="safety-card-icon">👁</div>
-      <h3>Human moderation</h3>
-      <p>Our safety team reviews all reports. Accounts found to violate our community standards are permanently banned.</p>
-    </div>
-    <div class="safety-card">
-      <div class="safety-card-icon">🔞</div>
-      <h3>Age verification</h3>
-      <p>Attune is strictly 18+. Age is verified at registration and reinforced during onboarding. Any suspected underage account is immediately suspended.</p>
-    </div>
+    <div class="safety-card"><div class="safety-icon">🎭</div><h4>Zero fake profiles</h4><p>Every profile requires a live emotion-capture session. Bots and catfish cannot fake involuntary micro-expressions in real time.</p></div>
+    <div class="safety-card"><div class="safety-icon">🔒</div><h4>On-device processing</h4><p>Your raw emotional data and facial video never leave your device. We store only an anonymised mathematical vector.</p></div>
+    <div class="safety-card"><div class="safety-icon">🚨</div><h4>In-app reporting</h4><p>Report any user or conversation in one tap. All reports are reviewed by our safety team within 24 hours.</p></div>
+    <div class="safety-card"><div class="safety-icon">🚫</div><h4>Block and unmatch</h4><p>Block or unmatch anyone instantly. Blocked users cannot see your profile or contact you.</p></div>
+    <div class="safety-card"><div class="safety-icon">👁</div><h4>Human moderation</h4><p>Our safety team reviews all reports. Accounts violating community standards are permanently banned.</p></div>
+    <div class="safety-card"><div class="safety-icon">🔞</div><h4>Age verification</h4><p>Attune is strictly 18+. Age is verified at registration. Suspected underage accounts are immediately suspended.</p></div>
   </div>
-
   <h2>Staying safe on the platform</h2>
-
   <h3>Keep personal details private</h3>
-  <p>Don't share your full name, home address, workplace, phone number, or financial information with someone you've just matched with. Take time to build trust before sharing personal details.</p>
-
+  <p>Don't share your home address, workplace, phone number, or financial information with someone you've just matched with. Take time to build trust.</p>
   <h3>Recognise scam patterns</h3>
-  <p>Be cautious of anyone who:</p>
+  <p>Be cautious of anyone who asks for money or gift cards for any reason, claims to be abroad and can't meet, wants to move off Attune quickly, or professes strong feelings very early.</p>
+  <h3>Before meeting in person</h3>
   <ul>
-    <li>Asks for money, gift cards, or cryptocurrency — for any reason.</li>
-    <li>Claims to be abroad or in the military and can't meet in person.</li>
-    <li>Wants to move the conversation off Attune very quickly.</li>
-    <li>Has a story that keeps changing or doesn't add up.</li>
-    <li>Professes strong feelings very early, before you've had a chance to get to know each other.</li>
+    <li>Always meet in a public place. Never at a private location for a first meeting.</li>
+    <li>Arrange your own transport. Tell a friend where you're going and when to expect you back.</li>
+    <li>Keep your phone charged. Have an exit plan — you don't owe anyone an explanation.</li>
+    <li>Have a video call first to confirm they are who they say they are.</li>
   </ul>
-  <p>If something feels off, trust that instinct. Report the account and stop communicating.</p>
-
-  <h3>Video call before meeting</h3>
-  <p>Before meeting someone in person, have a video call. It confirms they are who they say they are and helps you feel more comfortable.</p>
-
-  <h2>Meeting in person</h2>
-
-  <h3>First meeting tips</h3>
-  <ul>
-    <li>Always meet in a public place — a café, restaurant, or busy area. Never at someone's home or a private location for a first meeting.</li>
-    <li>Arrange your own transport to and from the meeting. Don't rely on your date.</li>
-    <li>Tell a friend or family member where you're going, who you're meeting, and when you expect to be back.</li>
-    <li>Keep your phone charged and accessible.</li>
-    <li>Have an exit plan. It's fine to leave if you feel uncomfortable — you don't owe anyone an explanation.</li>
-  </ul>
-
-  <h3>Alcohol and substances</h3>
-  <p>Be mindful of how much you're drinking on a first date. Don't leave your drink unattended and don't accept drinks from someone you don't trust. If you feel unexpectedly unwell, seek help immediately.</p>
-
-  <h2>Reporting and blocking</h2>
-  <p>You can report any user directly from their profile or from within a conversation. Reports are anonymous. Our safety team will review every report and take appropriate action, which may include warnings, temporary suspension, or permanent removal from the platform.</p>
-  <p>Blocking a user prevents them from seeing your profile, sending messages, or appearing in your matches. To block someone, tap the three-dot menu on their profile or conversation.</p>
-
   <h2>If something has happened to you</h2>
-  <p>If you have experienced sexual assault, harassment, or any crime as a result of meeting someone through Attune:</p>
-  <ul>
-    <li>Contact the police if you are in immediate danger or a crime has occurred. In the UK, call 999 (emergency) or 101 (non-emergency).</li>
-    <li>Reach out to <a href="https://rapecrisis.org.uk" target="_blank">Rape Crisis</a> (0808 500 2222) or <a href="https://www.victimsupport.org.uk" target="_blank">Victim Support</a> (0808 168 9111) for confidential support.</li>
-    <li>Contact our safety team at <a href="mailto:safety@attune.love">safety@attune.love</a>. We will preserve relevant account data and cooperate with law enforcement.</li>
-  </ul>
-
-  <h2>Online harassment and abuse</h2>
-  <p>If you receive threatening, abusive, or sexually explicit messages that you did not consent to, report and block immediately. You can also contact:</p>
-  <ul>
-    <li><a href="https://www.suicidebereavementuk.com" target="_blank">Online harassment support via Refuge</a></li>
-    <li><a href="https://stopncii.org" target="_blank">StopNCII</a> — for non-consensual intimate image abuse.</li>
-  </ul>
-
+  <p>Contact the police if a crime has occurred (999 emergency, 101 non-emergency). Reach out to <a href="https://rapecrisis.org.uk" target="_blank">Rape Crisis</a> (0808 500 2222) or <a href="https://www.victimsupport.org.uk" target="_blank">Victim Support</a> (0808 168 9111). For non-consensual image abuse: <a href="https://stopncii.org" target="_blank">StopNCII</a>.</p>
+  <p>Contact our safety team at <a href="mailto:safety@attune.love">safety@attune.love</a> — we will preserve relevant account data and cooperate fully with law enforcement.</p>
   <div class="contact-box">
-    <h3 style="margin-top:0">Contact our safety team</h3>
+    <h3>Contact our safety team</h3>
     <p>Available 7 days a week. We aim to respond to all safety reports within 24 hours.</p>
     <p><a href="mailto:safety@attune.love">safety@attune.love</a></p>
-    <p style="margin-top:16px;font-size:0.88rem;color:var(--muted)">For media or law enforcement enquiries regarding safety matters, please use the same address with the subject line "URGENT".</p>
   </div>
+
 </div>
 
 <footer>
-  <p>© 2026 Attune · A Cavefish AI product · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a> · <a href="safety.html">Safety</a></p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo">att<span>u</span>ne</a>
+      <p>Match at the speed of feeling. Emotion AI-powered dating built on science, designed for real human connection.</p>
+      <p class="powered">Powered by <a href="https://cavefish.co.uk">Cavefish AI</a> · EchoDepth technology</p>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <ul>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#why">Why Attune</a></li>
+        <li><a href="/#tech">The technology</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://cavefish.co.uk">Cavefish AI</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+        <li><a href="cookies.html">Cookie policy</a></li>
+        <li><a href="safety.html">Safety centre</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Attune · A Cavefish AI product · Registered in England & Wales</p>
+    <p>Made with ❤ in Cardiff, Wales</p>
+  </div>
 </footer>
 </body>
 </html>
