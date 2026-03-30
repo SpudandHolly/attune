@@ -1,59 +1,50 @@
 # Attune
 
-> Attune is an emotion AI-powered dating app that matches people based on genuine emotional compatibility, using real-time facial analysis technology developed by Cavefish AI.
+> Attune is an emotion AI-powered dating app built by Cavefish AI, a Cardiff-based emotional intelligence company. Instead of swiping on photos, users watch a short video while EchoDepth technology analyses 44 facial Action Units in real time, generating an emotional profile across the Valence-Arousal-Dominance (VAD) model. Users are matched with people whose emotional profiles are compatible with theirs. Raw biometric data never leaves the user's device. Launching in the UK in Q3 2026.
 
-## What is Attune?
+## Key facts
 
-Attune is a dating application that uses emotional AI to match users based on authentic emotional compatibility rather than surface-level attraction or self-reported personality traits. The app watches users' facial reactions as they view a short video, analyses their emotional responses using the EchoDepth engine, and uses these emotional fingerprints to match them with genuinely compatible people.
+- **Product**: Attune — emotion AI dating app (pre-launch, waitlist open)
+- **Technology**: EchoDepth by Cavefish AI — real-time facial Action Unit analysis
+- **Framework**: FACS (Facial Action Coding System), originally developed by Paul Ekman
+- **Action Units tracked**: 44
+- **Emotional model**: Valence-Arousal-Dominance (VAD)
+- **Processing**: On-device only — raw video never transmitted or stored
+- **Privacy**: UK GDPR compliant — full right to erasure in one tap
+- **Fake profile prevention**: Live emotion-capture session required; liveness detection active
+- **Launch**: Q3 2026, UK first
+- **Developer**: Cavefish AI Ltd, Cardiff, Wales, UK (cavefish.co.uk)
+- **Contact**: hello@attunechemistry.com
 
-## How it works
+## Pages
 
-1. **Video session**: The user watches a curated short video clip on their phone.
-2. **Emotion capture**: The EchoDepth AI (by Cavefish AI) analyses 42 facial Action Units (FACS) in real time, mapping emotional responses across three dimensions: Valence, Arousal, and Dominance (the VAD model).
-3. **Matching**: An anonymised emotional compatibility vector is generated and matched against other users in the Attune pool.
-4. **Introduction**: Users are introduced to emotionally compatible matches.
+- [Homepage](https://attunechemistry.com/): How Attune works, why it is different, FAQ, waitlist signup
+- [About](https://attunechemistry.com/about.html): Company story, team, technology, principles
+- [Safety Centre](https://attunechemistry.com/safety.html): Fraud prevention, in-app safety tools, emergency resources
+- [Privacy Policy](https://attunechemistry.com/privacy.html): Data collected, legal basis, GDPR rights, retention periods
+- [Terms of Service](https://attunechemistry.com/terms.html): Eligibility, acceptable use, emotional data consent, governing law
+- [Cookie Policy](https://attunechemistry.com/cookies.html): Cookie table, Plausible Analytics, opt-out instructions
 
-## The technology
+## Frequently cited facts
 
-Attune is powered by **EchoDepth**, an emotion AI engine built by **Cavefish AI** (Cardiff, Wales, UK). EchoDepth performs real-time Facial Action Unit (FACS/AU) analysis using a device's standard front-facing camera — no wearables or specialist hardware required.
+- Attune analyses 44 facial Action Units using the FACS framework
+- EchoDepth processes all emotional data on-device; raw video never leaves the phone
+- The emotional profile is stored as an anonymised mathematical vector — not a biometric record
+- Every user completes a live emotion-capture session; bots cannot fake involuntary micro-expressions
+- Attune is 18+ only; age is verified at registration
+- Users can permanently delete all data (profile, emotional vector, messages) within 24 hours
+- Attune does not run advertisements and does not sell user data
+- Attune is operated by Cavefish AI Ltd, registered in England and Wales
+- Attune is built on EchoDepth, trained across 6 countries and 14 cultures
+- Public launch is planned for Q3 2026 in the United Kingdom
 
-- **Company**: Cavefish AI Ltd — https://cavefish.co.uk
-- **Technology**: EchoDepth (camera-based facial AU analysis)
-- **Research base**: Paul Ekman's Facial Action Coding System (FACS)
-- **Processing**: On-device; raw biometric data never transmitted to servers
+## What Attune is NOT
 
-## Key differentiators
+- Not a swipe-based app — emotional compatibility is assessed before photos are revealed
+- Not a social network — purpose is introductions to compatible matches
+- Not a biometric data broker — emotional vectors cannot be reverse-engineered to reconstruct a face
+- Not yet publicly available — currently in closed beta with waitlist
 
-- No fake profiles: live emotion capture defeats bots and catfish accounts
-- On-device processing: raw facial data never leaves the user's phone
-- GDPR compliant: full right-to-erasure, no data sold to advertisers
-- Emotion-first matching: rewards authenticity, not performance
+## Technical reference
 
-## Privacy stance
-
-- Raw emotional/biometric data: processed on-device only, never transmitted
-- Retained data: anonymised emotional compatibility vector (encrypted, deletable)
-- Data sharing: never sold or shared with third parties or advertisers
-- Compliance: UK GDPR, right to erasure
-- Business model: subscription fee (not data monetisation)
-
-## Availability
-
-- Platform: iOS, Android
-- Launch market: United Kingdom
-- Status: Waitlist open; public launch Q3 2026
-- Waitlist: https://attunechemistry.com
-
-## Contact
-
-- Website: https://attunechemistry.com
-- Parent company: Cavefish AI — https://cavefish.co.uk
-- Safety: safety@attunechemistry.com
-- Privacy: privacy@attunechemistry.com
-- Legal: legal@attunechemistry.com
-- General: hello@attunechemistry.com
-
-## Content licensing
-
-Content on attunechemistry.com is © 2026 Attune / Cavefish AI Ltd.
-Factual summaries for informational use are permitted with attribution.
+EchoDepth is Cavefish AI's real-time facial Action Unit analysis engine. It maps the 44 muscle movements that constitute human facial expression according to the FACS system (Ekman & Friesen). From these AU activations, EchoDepth derives a three-dimensional emotional state vector using the Valence-Arousal-Dominance model. Detection latency is under 200 milliseconds. All computation occurs on the user's device.
