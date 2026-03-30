@@ -1,11 +1,11 @@
 # Attune
 
-> Attune is an emotion AI-powered dating app built by Cavefish AI, a Cardiff-based emotional intelligence company. Instead of swiping on photos, users watch a short video while EchoDepth technology analyses 44 facial Action Units in real time, generating an emotional profile across the Valence-Arousal-Dominance (VAD) model. Users are matched with people whose emotional profiles are compatible with theirs. Raw biometric data never leaves the user's device. Launching in the UK in Q3 2026.
+> Attune is an emotion AI-powered dating app built by Cavefish, a Cardiff-based emotional intelligence company. Instead of swiping on photos, users watch a short video while EchoDepth technology analyses 44 facial Action Units in real time, generating an emotional profile across the Valence-Arousal-Dominance (VAD) model. Users are matched with people whose emotional profiles are compatible with theirs. Raw biometric data never leaves the user's device. Launching in the UK in Q3 2026.
 
 ## Key facts
 
 - **Product**: Attune — emotion AI dating app (pre-launch, waitlist open)
-- **Technology**: EchoDepth by Cavefish AI — real-time facial Action Unit analysis
+- **Technology**: EchoDepth by Cavefish — real-time facial Action Unit analysis
 - **Framework**: FACS (Facial Action Coding System), originally developed by Paul Ekman
 - **Action Units tracked**: 44
 - **Emotional model**: Valence-Arousal-Dominance (VAD)
@@ -47,4 +47,4 @@
 
 ## Technical reference
 
-EchoDepth is Cavefish AI's real-time facial Action Unit analysis engine. It maps the 44 muscle movements that constitute human facial expression according to the FACS system (Ekman & Friesen). From these AU activations, EchoDepth derives a three-dimensional emotional state vector using the Valence-Arousal-Dominance model. Detection latency is under 200 milliseconds. All computation occurs on the user's device.
+EchoDepth is Cavefish's real-time facial Action Unit analysis engine. It maps the 44 muscle movements that constitute human facial expression according to the FACS system (Ekman & Friesen). From these AU activations, EchoDepth derives a three-dimensional emotional state vector using the Valence-Arousal-Dominance model. Detection latency is under 200 milliseconds. All computation occurs on the user's device.
