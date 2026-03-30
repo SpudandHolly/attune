@@ -4,3 +4,6 @@ https://www.attunechemistry.com/*  https://attunechemistry.com/:splat  301!
 # Redirect HTTP to HTTPS
 http://attunechemistry.com/*      https://attunechemistry.com/:splat  301!
 http://www.attunechemistry.com/*  https://attunechemistry.com/:splat  301!
+
+# Custom 404
+/*  /404.html  404

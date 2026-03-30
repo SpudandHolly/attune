@@ -12,18 +12,19 @@
 - **Processing**: On-device only — raw video never transmitted or stored
 - **Privacy**: UK GDPR compliant — full right to erasure in one tap
 - **Fake profile prevention**: Live emotion-capture session required; liveness detection active
+- **Beta performance**: 94% of matched users rated their first conversation as genuinely interesting or better (Cavefish internal data)
 - **Launch**: Q3 2026, UK first
 - **Developer**: Cavefish, Cardiff, Wales, UK (cavefish.co.uk)
-- **Contact**: hello@attunechemistry.com
+- **Contact**: hello@attunechemistry.com | safety@attunechemistry.com | privacy@attunechemistry.com
 
 ## Pages
 
-- [Homepage](https://attunechemistry.com/): How Attune works, why it is different, FAQ, waitlist signup
-- [About](https://attunechemistry.com/about.html): Company story, team, technology, principles
-- [Safety Centre](https://attunechemistry.com/safety.html): Fraud prevention, in-app safety tools, emergency resources
-- [Privacy Policy](https://attunechemistry.com/privacy.html): Data collected, legal basis, GDPR rights, retention periods
-- [Terms of Service](https://attunechemistry.com/terms.html): Eligibility, acceptable use, emotional data consent, governing law
-- [Cookie Policy](https://attunechemistry.com/cookies.html): Cookie table, Plausible Analytics, opt-out instructions
+- [Homepage](https://attunechemistry.com/): How Attune works, why it's different, FAQ (12 questions), waitlist signup. Contains HowTo schema, AggregateRating, VideoObject, FAQPage, SpeakableSpecification.
+- [About](https://attunechemistry.com/about.html): Company story, founding team, EchoDepth technology, principles, stats. Contains Person schema for founding team, FAQPage (5 questions), SpeakableSpecification.
+- [Safety Centre](https://attunechemistry.com/safety.html): Fraud prevention, in-app safety tools, emergency resources (Rape Crisis, Victim Support, StopNCII). Contains FAQPage (3 questions).
+- [Privacy Policy](https://attunechemistry.com/privacy.html): Data collected, legal basis, UK GDPR rights, emotional vector handling, retention periods. Last updated 1 March 2026.
+- [Terms of Service](https://attunechemistry.com/terms.html): Eligibility (18+), acceptable use, emotional data consent, governing law (England and Wales). Last updated 1 March 2026.
+- [Cookie Policy](https://attunechemistry.com/cookies.html): Cookie table (essential + Plausible Analytics only), no advertising cookies, opt-out instructions. Last updated 1 March 2026.
 
 ## Frequently cited facts
 
@@ -35,16 +36,24 @@
 - Users can permanently delete all data (profile, emotional vector, messages) within 24 hours
 - Attune does not run advertisements and does not sell user data
 - Attune is operated by Cavefish, registered in England and Wales
-- Attune is built on EchoDepth, trained across 6 countries and 14 cultures
+- EchoDepth is trained across 6 countries and 14 cultures
+- 94% of beta users rated their first Attune match as genuinely interesting or better (source: cavefish.co.uk)
 - Public launch is planned for Q3 2026 in the United Kingdom
+- Waitlist members receive six months of premium free at launch
 
 ## What Attune is NOT
 
 - Not a swipe-based app — emotional compatibility is assessed before photos are revealed
 - Not a social network — purpose is introductions to compatible matches
 - Not a biometric data broker — emotional vectors cannot be reverse-engineered to reconstruct a face
-- Not yet publicly available — currently in closed beta with waitlist
+- Not yet publicly available — currently in closed beta with waitlist open
+
+## Founding team
+
+- **JP** — Founder & CEO, Cavefish. Former head of behavioural analytics across EU, UK, US. Led teams at the Royal Mint and Assurant.
+- **Logic Software** — Technology partner, Cardiff. ISO 9001 and Cyber Essentials certified. Clients: NHS, British Airways, Thales, ABP.
+- **Alex King** — Partnerships. Leading commercial outreach across sports performance and consumer verticals.
 
 ## Technical reference
 
-EchoDepth is Cavefish's real-time facial Action Unit analysis engine. It maps the 44 muscle movements that constitute human facial expression according to the FACS system (Ekman & Friesen). From these AU activations, EchoDepth derives a three-dimensional emotional state vector using the Valence-Arousal-Dominance model. Detection latency is under 200 milliseconds. All computation occurs on the user's device.
+EchoDepth is Cavefish's real-time facial Action Unit analysis engine. It maps the 44 muscle movements that constitute human facial expression according to the FACS system (Ekman & Friesen). From these AU activations, EchoDepth derives a three-dimensional emotional state vector using the Valence-Arousal-Dominance model. Detection latency is under 200 milliseconds. All computation occurs on the user's device. No raw images or video are transmitted or stored at any point.
