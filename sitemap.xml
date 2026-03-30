@@ -1,49 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
     <loc>https://attunechemistry.com/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://attunechemistry.com/og-image.jpg</image:loc>
       <image:title>Attune — Match at the Speed of Feeling</image:title>
+      <image:caption>Attune emotion AI dating app — matches you on genuine emotional compatibility using 44 facial Action Units</image:caption>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://attunechemistry.com/og-image.jpg</video:thumbnail_loc>
+      <video:title>How Attune emotion-based matching works</video:title>
+      <video:description>See how Attune uses EchoDepth facial Action Unit analysis to generate an emotional profile in under three minutes.</video:description>
+      <video:content_loc>https://attunechemistry.com/attune-video.mp4</video:content_loc>
+      <video:duration>90</video:duration>
+      <video:publication_date>2026-03-01</video:publication_date>
+    </video:video>
   </url>
 
   <url>
     <loc>https://attunechemistry.com/about.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://attunechemistry.com/safety.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://attunechemistry.com/privacy.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://attunechemistry.com/terms.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://attunechemistry.com/cookies.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

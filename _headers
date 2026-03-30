@@ -1,4 +1,4 @@
-# Cache static assets aggressively
+# Static assets — cache aggressively (content-hashed filenames would allow immutable, but using long TTL)
 /favicon.ico
   Cache-Control: public, max-age=31536000, immutable
 
@@ -13,6 +13,10 @@
 
 /apple-touch-icon.png
   Cache-Control: public, max-age=31536000, immutable
+
+/og-image.jpg
+  Cache-Control: public, max-age=2592000
+  Vary: Accept-Encoding
 
 /*.svg
   Cache-Control: public, max-age=2592000
@@ -30,18 +34,30 @@
   Cache-Control: public, max-age=86400
   Accept-Ranges: bytes
 
-# HTML pages — short cache, always revalidate
+# HTML — short TTL with stale-while-revalidate for instant perceived loads
 /*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400, must-revalidate
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Robots-Tag: index, follow
 
 # Root
 /
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400, must-revalidate
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Robots-Tag: index, follow
+
+# Config files — always fresh
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/llms.txt
+  Cache-Control: public, max-age=86400
