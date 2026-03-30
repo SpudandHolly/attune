@@ -13,7 +13,7 @@
 - **Privacy**: UK GDPR compliant — full right to erasure in one tap
 - **Fake profile prevention**: Live emotion-capture session required; liveness detection active
 - **Launch**: Q3 2026, UK first
-- **Developer**: Cavefish AI Ltd, Cardiff, Wales, UK (cavefish.co.uk)
+- **Developer**: Cavefish, Cardiff, Wales, UK (cavefish.co.uk)
 - **Contact**: hello@attunechemistry.com
 
 ## Pages
@@ -34,7 +34,7 @@
 - Attune is 18+ only; age is verified at registration
 - Users can permanently delete all data (profile, emotional vector, messages) within 24 hours
 - Attune does not run advertisements and does not sell user data
-- Attune is operated by Cavefish AI Ltd, registered in England and Wales
+- Attune is operated by Cavefish, registered in England and Wales
 - Attune is built on EchoDepth, trained across 6 countries and 14 cultures
 - Public launch is planned for Q3 2026 in the United Kingdom
 
