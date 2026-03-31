@@ -235,6 +235,22 @@
     .footer-col ul li a:hover { color: var(--gold); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--muted); }
 
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .faq-question {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 22px 26px; color: var(--cream); font-family: var(--serif);
+      font-size: 1.05rem; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center; gap: 20px; transition: color 0.3s;
+    }
+    .faq-question:hover { color: var(--gold-lt); }
+    .faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner { padding: 0 26px 22px; font-size: 0.92rem; line-height: 1.8; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .story-grid, .tech-inner, .values-grid, .team-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -598,6 +614,61 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="about-faq" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-eyebrow fade-in">Common questions</div>
+    <h2 class="section-title fade-in">About Attune</h2>
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          What is Attune?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <p>Attune is an emotion AI dating app that analyses 44 facial Action Units to match users on genuine emotional compatibility — not photos. Built by Cavefish on <a href="methodology.html" style="color:var(--gold)">EchoDepth technology</a>, it processes all emotional data on-device and launches in the UK in Q3 2026.</p>
+        </div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          What is EchoDepth?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <p>EchoDepth is Cavefish's real-time facial Action Unit analysis engine. It maps 44 facial muscle movements using the FACS system developed by Paul Ekman, deriving a Valence-Arousal-Dominance emotional profile. All processing happens on-device — no raw images or video are transmitted or stored.</p>
+        </div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Who built Attune?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <p>Attune is built by <strong>Cavefish</strong>, a Cardiff-based emotional intelligence company. The technology partner is <strong>Logic Software</strong>, ISO 9001 and Cyber Essentials certified, whose clients include NHS, British Airways, Thales, and ABP.</p>
+        </div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Where is Attune based?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <p>Attune is built and operated in Cardiff, Wales, UK by Cavefish. The company is registered in England and Wales and fully compliant with UK GDPR.</p>
+        </div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Has Attune won any awards?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <p>Cavefish, the company behind Attune, has won <strong>13 industry awards</strong> and completed two accelerator programmes. EchoDepth has been trained across 6 countries and 14 cultures.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section id="about-cta">
   <div class="container">
@@ -656,6 +727,20 @@
   </div>
 </footer>
 
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+</script>
 <script>
   // Fade-in on scroll (identical to main site)
   const obs = new IntersectionObserver((entries) => {

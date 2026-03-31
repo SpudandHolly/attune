@@ -189,6 +189,46 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the FACS framework?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Facial Action Coding System (FACS) is a comprehensive anatomical taxonomy of human facial expressions developed by psychologist Paul Ekman and Wallace V. Friesen in 1978. It is the established standard for facial expression research across psychology, neuroscience, and human-computer interaction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does EchoDepth measure emotions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EchoDepth analyses 44 facial Action Units in real time using the device's front-facing camera. It captures both voluntary expressions and involuntary micro-expressions lasting under 200 milliseconds, then maps them to emotional states using the Valence-Arousal-Dominance model. All processing occurs on-device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the VAD emotional model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Valence-Arousal-Dominance model is the most widely used dimensional model of emotion in affective computing. Valence measures positive-to-negative feeling, arousal measures intensity, and dominance measures sense of control. Together they produce a three-dimensional emotional fingerprint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is Attune's emotion-based matching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Attune's closed beta, 94% of matched users rated their first conversation as genuinely interesting or better. The matching system compares emotional vectors using a similarity model that finds complementary profiles — not identical ones."
+      }
+    }
+  ]
+}
+</script>
   <style>
     .content { max-width: 740px; margin: 0 auto; padding: 120px 5% 80px; }
     .page-eyebrow { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
@@ -213,6 +253,20 @@
     .btn-primary { background: var(--warm); color: #0B0906; padding: 14px 28px; border-radius: 2px; font-weight: 500; font-family: var(--sans); text-decoration: none; font-size: 0.9rem; }
     .btn-secondary { background: transparent; color: var(--cream); border: 1px solid var(--border); padding: 13px 26px; border-radius: 2px; font-family: var(--sans); text-decoration: none; font-size: 0.9rem; }
     .btn-secondary:hover { border-color: var(--gold); }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; margin-top: 32px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .faq-question {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 22px 26px; color: var(--cream); font-family: var(--serif);
+      font-size: 1.05rem; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center; gap: 20px; transition: color 0.3s;
+    }
+    .faq-question:hover { color: var(--gold-lt); }
+    .faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner { padding: 0 26px 22px; font-size: 0.92rem; line-height: 1.8; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MH9PFDV8Q"></script>
@@ -306,6 +360,46 @@
     <p>For full details, read our <a href="privacy.html">Privacy Policy</a>.</p>
   </section>
 
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list" role="list">
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What is the FACS framework?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The Facial Action Coding System (FACS) is a comprehensive anatomical taxonomy of human facial expressions developed by psychologist Paul Ekman and Wallace V. Friesen in 1978. It is the established standard for facial expression research across psychology, neuroscience, and human-computer interaction.</p>
+      </div></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        How does EchoDepth measure emotions?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>EchoDepth analyses <strong>44 facial Action Units</strong> in real time using the device's front-facing camera. It captures both voluntary expressions and involuntary micro-expressions lasting under 200 milliseconds, then maps them to emotional states using the Valence-Arousal-Dominance model. All processing occurs on-device.</p>
+      </div></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What is the VAD emotional model?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The Valence-Arousal-Dominance model is the most widely used dimensional model of emotion in affective computing. <strong>Valence</strong> measures positive-to-negative feeling, <strong>arousal</strong> measures intensity, and <strong>dominance</strong> measures sense of control. Together they produce a three-dimensional emotional fingerprint.</p>
+      </div></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        How accurate is Attune's emotion-based matching?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>In Attune's closed beta, <strong>94% of matched users</strong> rated their first conversation as genuinely interesting or better. The matching system compares emotional vectors using a similarity model that finds complementary profiles — not identical ones.</p>
+      </div></div>
+    </div>
+  </div>
+
   <div class="cta-block">
     <p>Questions about the science or the data?</p>
     <a href="mailto:hello@attunechemistry.com" class="btn-primary">Get in touch</a>
@@ -353,5 +447,19 @@
     <p>Made with ❤ in Cardiff, Wales</p>
   </div>
 </footer>
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+</script>
 </body>
 </html>
