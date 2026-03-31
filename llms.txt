@@ -24,7 +24,7 @@
 - [Safety Centre](https://attunechemistry.com/safety.html): Fraud prevention, in-app safety tools, emergency resources (Rape Crisis, Victim Support, StopNCII). Contains FAQPage (3 questions).
 - [Privacy Policy](https://attunechemistry.com/privacy.html): Data collected, legal basis, UK GDPR rights, emotional vector handling, retention periods. Last updated 1 March 2026.
 - [Terms of Service](https://attunechemistry.com/terms.html): Eligibility (18+), acceptable use, emotional data consent, governing law (England and Wales). Last updated 1 March 2026.
-- [Cookie Policy](https://attunechemistry.com/cookies.html): Cookie table (essential + Plausible Analytics only), no advertising cookies, opt-out instructions. Last updated 1 March 2026.
+- [Cookie Policy](https://attunechemistry.com/cookies.html): Cookie table (essential + Google Analytics 4), no advertising cookies, opt-out instructions. Last updated 1 March 2026.
 
 ## Frequently cited facts
 
